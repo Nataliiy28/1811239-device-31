@@ -3,18 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title> Интернет магазин Device «DEVICE»</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/ico.svg" tape="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title> Интернет магазин Device «DEVICE»</title>
 </head>
 
 <body>
-  <header>
+  <header class="main-header">
     <nav>
       <div>
-        <a><img src="img/index-logo.svg" width="368" height="153" alt="DEVICE"></a>
+        <a><img src="img/img/icons/main_black_logo.svg" width="368" height="153" alt="DEVICE"></a>
         <form action="#">
           <label>
             <input type="text" name="поиск" placeholder="Поиск по сайту">
-            <img src="#" alt="маленькая лупа">
+            <a><img src="img/search.svg" width="16" height="16" alt="маленькая черная лупа"></a>
             <button type="button">Найти</button>
           </label>
         </form>
@@ -22,6 +28,7 @@
 
         <div>
           <a href="price.html">Каталог товаров</a>
+          <a><img src="img/img/icons/Vector.svg" width="16" height="16" alt="маленькая черная лупа"></a>
           <ul>
             <!-- Вложенное меню -->
             <li><a href="price.html">Виртуальная реальность</a></li>
@@ -62,7 +69,7 @@
 
   <main>
     <!-- Хлебные крошки -->
-    <section>
+    <div>
       <h1>Моноподы для селфи</h1>
       <ul>
         <li>
@@ -77,7 +84,7 @@
           <a href="price.html">Моноподы для селфи</a>
         </li>
       </ul>
-    </section>
+    </div>
 
     <!-- Фильтр -->
     <div>
@@ -103,164 +110,168 @@
       </ul>
     </div>
     <!-- Фильтр слайдер стоимость-->
-    <section>
-      <div class="slidecontainer">
-        <input type="range" min="0" max="5000" value="50" class="slider" id="myRange">
-      </div>
+    <div>
+      <aside class="slidebar"> </aside>
+    </div>
+
+    <div>
       <!-- Чекбокс квадратный -->
-      <div>
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Цвет:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="Черный" id="Цвет черный" checked>
-                <label for="Colour checkbox">Черный</label>
-              </li>
-
-              <li>
-                <input type="checkbox" name="Белый" id="Цвет белый" checked>
-                <label for="Colour checkbox">Белый</label>
-              </li>
-
-              <li>
-                <input type="checkbox" name="Синий" id="Цвет синий" checked>
-                <label for="Colour checkbox">Синий</label>
-              </li>
-
-              <li>
-                <input type="checkbox" name="Красный" id="Цвет красный" checked>
-                <label for="Colour checkbox">Красный</label>
-              </li>
-
-              <li>
-                <input type="checkbox" name="Розовый" id="Цвет розовый" checked>
-                <label for="Colour checkbox">Розовый</label>
-              </li>
-            </ul>
-          </fieldset>
-          <!-- Чекбокс круглый -->
-          <fieldset>
-            <legend>Bluetooth:</legend>
-            <ul>
-              <li>
-                <input type="radio" checked name="Bluetooth checkbox yes" />
-                <label for="Yes checkbox Bluetooth">есть</label>
-              </li>
-              <li>
-                <input type="radio" checked name="Bluetooth checkbox no" />
-                <label for=" No checkbox Bluetooth">нет</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="submit">Показать</button>
-        </form>
-      </div>
-      <!-- Секция с карточками товара -->
-      <div>
-        <section>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <input type="range" min="0" max="5000" value="50" class="slider" id="myRange">
+        <fieldset>
+          <legend>Цвет:</legend>
           <ul>
             <li>
-              <a href="product.html"></a>
+              <input type="checkbox" name="Черный" id="Цвет черный" checked>
+              <label for="Colour checkbox">Черный</label>
+            </li>
 
+            <li>
+              <input type="checkbox" name="Белый" id="Цвет белый" checked>
+              <label for="Colour checkbox">Белый</label>
+            </li>
 
-              <h3>Любительская селфи-палка</h3>
-              <p>
-                Добавить к сравнению
-                В корзину
-                <img src="img/selfstick-1.jpg" width="360" height="381" alt=" селфи-палка для телефонов с телефоном">
-              </p>
+            <li>
+              <input type="checkbox" name="Синий" id="Цвет синий" checked>
+              <label for="Colour checkbox">Синий</label>
+            </li>
 
-              <p>
-                1 100 ₽
-              </p>
+            <li>
+              <input type="checkbox" name="Красный" id="Цвет красный" checked>
+              <label for="Colour checkbox">Красный</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="Розовый" id="Цвет розовый" checked>
+              <label for="Colour checkbox">Розовый</label>
             </li>
           </ul>
-        </section>
-
-        <section>
+        </fieldset>
+        <!-- Чекбокс круглый -->
+        <fieldset>
+          <legend>Bluetooth:</legend>
           <ul>
             <li>
-              <a href="product.html">
-                <h3>Профессиональная селфи-палка </h3>
-                <p>
-                  <img src="img/selfstick-2.jpg" width="360" height="380" alt=" Черная селфи-палка ">
-                </p>
-              </a>
-              <p>
-                1 100 ₽
-              </p>
+              <input type="radio" checked name="Bluetooth checkbox yes" />
+              <label for="Yes checkbox Bluetooth">есть</label>
+            </li>
+            <li>
+              <input type="radio" checked name="Bluetooth checkbox no" />
+              <label for=" No checkbox Bluetooth">нет</label>
             </li>
           </ul>
-        </section>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
+    </div>
+    <!-- Секция с карточками товара -->
+    <div>
+      <section>
+        <ul>
+          <li>
+            <a href="product.html"></a>
 
-        <section>
-          <ul>
-            <li>
-              <a href="product.html">
-                <h3>Непотопляемая селфи-палка</h3>
-                <p>
 
-                  <img src="img/selfstick-3.jpg" width="360" height="380"
-                    alt="Толстая селфи-палка  желтого и черного цвета">
-                </p>
-              </a>
-              <p>
-                1 500 ₽
-              </p>
-            </li>
-          </ul>
-        </section>
+            <h3>Любительская селфи-палка</h3>
+            <p>
+              Добавить к сравнению
+              В корзину
+              <img src="img/img/catalog/monpod_selfystick.jpg" width="360" height="381" alt="селфи-палка с телефоном">
+            </p>
 
-        <section>
-          <ul>
-            <li>
-              <a href="product.html">
-                <h3>Селфи-палка «Следуй за мной»</h3>
-                <p>
-
-                  <img src="img/selfstick-4.jpg" width="360" height="380" alt="селфи-палка  с искусственной рукой">
-                </p>
-              </a>
-              <p>
-                1 900 ₽
-              </p>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a>2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-
-            <button type="button">Назад</button>
-            <button type="button">Вперед</button>
-          </ul>
-        </section>
-      </div>
+            <p>
+              1 100 ₽
+            </p>
+          </li>
+        </ul>
       </section>
- </main>
+
+      <section>
+        <ul>
+          <li>
+            <a href="product.html">
+              <h3>Профессиональная селфи-палка </h3>
+              <p>
+                <img src="img/img/catalog/selfy_black_stick.jpg" width="360" height="380" alt=" Черная селфи-палка ">
+              </p>
+            </a>
+            <p>
+              1 100 ₽
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <ul>
+          <li>
+            <a href="product.html">
+              <h3>Непотопляемая селфи-палка</h3>
+              <p>
+
+                <img src="img/img/catalog/gopro_stick.jpg" width="360" height="380"
+                  alt="Толстая селфи-палка  желтого и черного цвета">
+              </p>
+            </a>
+            <p>
+              1 500 ₽
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <ul>
+          <li>
+            <a href="product.html">
+              <h3>Селфи-палка «Следуй за мной»</h3>
+              <p>
+
+                <img src="img/img/catalog/hand_stick.jpg" width="360" height="380" alt="селфи-палка  с искусственной рукой">
+              </p>
+            </a>
+            <p>
+              1 900 ₽
+            </p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a>2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+
+          <button type="button">Назад</button>
+          <button type="button">Вперед</button>
+        </ul>
+      </section>
+    </div>
+
+  </main>
 
 
   <footer>
     <div>
       <a>
-        <img src="img/index-logo.svg" width="560" height="222" alt="Карта">
+        <img src="img/img/map/map 1.jpg" width="560" height="222" alt="Карта">
       </a>
       <ul>
         <li>
           <a href="blank.html">Валентин Петухов</a>
+          <a><img src="img/img/icons/icon_user.svg" width="9" height="10" alt="пользователь"></a>
         </li>
         <li>
+          <img src="img/img/icons/icon_cart.svg" width="14" height="14" alt="3 ступеньки">
           <a href="blank.html">Сравнить</a>
         </li>
         <li>
+          <img src="img/img/icons/icon_chart.svg" width="9" height="10" alt="корзина">
           <a href="blank.html">Корзина</a>
         </li>
 
@@ -290,20 +301,23 @@
     <div>
       <ul>
         <li>
+          <img src="img/img/footer/sotial/twetter.png" width="32" height="32" alt="twetter icon">
           <a href="#">Твиттер</a>
         </li>
         <li>
+          <img src="img/img/footer/sotial/facebook.png" width="32" height="32" alt="facebook icon">
           <a href="#">Фейсбук</a>
         </li>
         <li>
+          <img src="img/img/footer/sotial/instagram.png" width="32" height="32" alt="instagram icon">
           <a href="#">Инстаграм</a>
         </li>
       </ul>
       <a>
-        <img src="img/index-logo.svg" width="115" height="33,03" alt="logo_htmlacademy">
+        <img src="img/img/footer/logo_htmlacademy.png" width="115" height="33,03" alt="logo_htmlacademy">
       </a>
     </div>
   </footer>
 </body>
-<!-- внесены изменения по последненму ревью -->
+
 </html>
