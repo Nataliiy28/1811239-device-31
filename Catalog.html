@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
   <meta charset="UTF-8">
   <title> Интернет магазин Device «DEVICE»</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicon/ico.svg" tape="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <title> Интернет магазин Device «DEVICE»</title>
+  <!-- шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<body>
-  <header class="main-header">
-    <nav>
+<body class="page-body inner-page">
+  <header class="header">
+    <nav class="main-navigation">
       <div>
-        <a><img src="img/img/icons/main_black_logo.svg" width="368" height="153" alt="DEVICE"></a>
+        <a class="main-header-logo"><img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE"></a>
         <form action="#">
           <label>
-            <input type="text" name="поиск" placeholder="Поиск по сайту">
-            <a><img src="img/search.svg" width="16" height="16" alt="маленькая черная лупа"></a>
+            <input class="site-navigation" type="text" name="поиск" placeholder="Поиск по сайту">
+            <a><img src="./img/icons/icon_search.svg" width="16" height="16" alt="lupa"></a>
             <button type="button">Найти</button>
           </label>
         </form>
 
 
-        <div>
-          <a href="price.html">Каталог товаров</a>
-          <a><img src="img/img/icons/Vector.svg" width="16" height="16" alt="маленькая черная лупа"></a>
-          <ul>
+        <div class="dropdown-menu">
+          <a href="price.html" class="navigation-link">Каталог товаров <img src="./img/icons/Vector.svg" width="16"
+              height="16" alt="+"></a>
+          <ul class="site-navigation-list">
             <!-- Вложенное меню -->
             <li><a href="price.html">Виртуальная реальность</a></li>
             <li><a href="blank.html">Моноподы для селфи</a></li>
@@ -41,27 +45,31 @@
         </div>
       </div>
 
+
       <div>
 
-        <ul>
-          <li>
-            <a href="blank.html">Валентин Петухов</a>
+        <ul class="navigation-personal">
+
+          <li class="navigation-personal-item">
+            <a class="login-link" href="blank.html"><img src="./img/icons/icon_user.svg" width="13" height="14"
+                alt="черная иконка пользователя">Валентин Петухов</a>
+            <a class="button-personal-item" href="blank.html">Выйти</a>
           </li>
-          <li>
-            <a href="blank.html">Выйти</a>
+
+          <li class="navigation-personal-item">
+            <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14"
+                height="14" alt="лесница сравнения черная">Сравнить</a>
+
           </li>
-          <li>
-            <a href="blank.html">Сравнить</a>
-          </li>
-          <li>
-            <a href="blank.html">Корзина</a>
+          <li class="navigation-personal-item">
+            <a class="navigation-personal-item" href="blank.html"><img src="./img/icons/icon_cart.svg" width="14"
+                height="14" alt="черная корзинка ">Корзина</a>
           </li>
         </ul>
-        <ul>
-
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Гарантия</a></li>
-          <li><a href="price.html">Контакты</a></li>
+        <ul class="site-navigation">
+          <li><a class="navigation-link" href="blank.html">Доставка</a></li>
+          <li><a class="navigation-link" href="blank.html">Гарантия</a></li>
+          <li><a class="navigation-link" href="price.html">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -69,16 +77,16 @@
 
   <main>
     <!-- Хлебные крошки -->
-    <div>
+    <div class="bread-crumbs">
       <h1>Моноподы для селфи</h1>
       <ul>
         <li>
           <a href="blank.html">Главная </a>
-          <a><img src="#"></a>
+          <a><img src="/img/main/arrow_breadcrumbs.svg"></a>
         </li>
         <li>
           <a href="blank.html">Каталог</a>
-          <a><img src="#"></a>
+          <a><img src="/img/main/arrow_breadcrumbs.svg"></a>
         </li>
         <li>
           <a href="price.html">Моноподы для селфи</a>
@@ -87,10 +95,11 @@
     </div>
 
     <!-- Фильтр -->
-    <div>
+    <div class="filters">
       <ul>
         <li>
           <a href="catalog.html">Фильтр:</a>
+
         </li>
         <li>
           <a href="catalog.html">Сортировка:</a>
@@ -114,13 +123,13 @@
       <aside class="slidebar"> </aside>
     </div>
 
-    <div>
+    <div class="all-chekbox">
       <!-- Чекбокс квадратный -->
       <form method="get" action="https://echo.htmlacademy.ru">
         <input type="range" min="0" max="5000" value="50" class="slider" id="myRange">
-        <fieldset>
+        <fieldset class="checkbox-square">
           <legend>Цвет:</legend>
-          <ul>
+          <ul class="checkbox-list">
             <li>
               <input type="checkbox" name="Черный" id="Цвет черный" checked>
               <label for="Colour checkbox">Черный</label>
@@ -148,7 +157,7 @@
           </ul>
         </fieldset>
         <!-- Чекбокс круглый -->
-        <fieldset>
+        <fieldset class="checkbox-round">
           <legend>Bluetooth:</legend>
           <ul>
             <li>
@@ -165,9 +174,9 @@
       </form>
     </div>
     <!-- Секция с карточками товара -->
-    <div>
+    <div class="main-catalog-img">
       <section>
-        <ul>
+        <ul class="text-inside">
           <li>
             <a href="product.html"></a>
 
@@ -176,9 +185,8 @@
             <p>
               Добавить к сравнению
               В корзину
-              <img src="img/img/catalog/monpod_selfystick.jpg" width="360" height="381" alt="селфи-палка с телефоном">
             </p>
-
+            <img src="./img/catalog/monpod_selfystick.jpg" width="360" height="381" alt="селфи-палка с телефоном">
             <p>
               1 100 ₽
             </p>
@@ -187,12 +195,12 @@
       </section>
 
       <section>
-        <ul>
+        <ul class="text-inside">
           <li>
             <a href="product.html">
               <h3>Профессиональная селфи-палка </h3>
               <p>
-                <img src="img/img/catalog/selfy_black_stick.jpg" width="360" height="380" alt=" Черная селфи-палка ">
+                <img src="./img/catalog/selfy_black_stick.jpg" width="360" height="380" alt=" Черная селфи-палка ">
               </p>
             </a>
             <p>
@@ -203,13 +211,13 @@
       </section>
 
       <section>
-        <ul>
+        <ul class="text-inside">
           <li>
             <a href="product.html">
               <h3>Непотопляемая селфи-палка</h3>
               <p>
 
-                <img src="img/img/catalog/gopro_stick.jpg" width="360" height="380"
+                <img src="./img/catalog/gopro_stick.jpg" width="360" height="380"
                   alt="Толстая селфи-палка  желтого и черного цвета">
               </p>
             </a>
@@ -221,13 +229,14 @@
       </section>
 
       <section>
-        <ul>
+        <ul class="text-inside">
           <li>
             <a href="product.html">
               <h3>Селфи-палка «Следуй за мной»</h3>
               <p>
 
-                <img src="img/img/catalog/hand_stick.jpg" width="360" height="380" alt="селфи-палка  с искусственной рукой">
+                <img src="./img/catalog/hand_stick.jpg" width="360" height="380"
+                  alt="селфи-палка  с искусственной рукой">
               </p>
             </a>
             <p>
@@ -236,7 +245,7 @@
           </li>
         </ul>
 
-        <ul>
+        <ul class="pagination-list">
           <li>
             <a href="#">1</a>
           </li>
@@ -256,66 +265,71 @@
   </main>
 
 
-  <footer>
-    <div>
-      <a>
-        <img src="img/img/map/map 1.jpg" width="560" height="222" alt="Карта">
-      </a>
+  <footer class="main-footer">
+    <div class="footer-icon-menu">
+
       <ul>
         <li>
+          <a><img src="./img/footer/login_person.svg" width="9" height="10" alt="пользователь"></a>
           <a href="blank.html">Валентин Петухов</a>
-          <a><img src="img/img/icons/icon_user.svg" width="9" height="10" alt="пользователь"></a>
+
         </li>
         <li>
-          <img src="img/img/icons/icon_cart.svg" width="14" height="14" alt="3 ступеньки">
+          <img src="./img/footer/chart.svg" width="14" height="14" alt="3 ступеньки">
           <a href="blank.html">Сравнить</a>
         </li>
         <li>
-          <img src="img/img/icons/icon_chart.svg" width="9" height="10" alt="корзина">
+          <img src="./img/footer/cart2.svg" width="9" height="10" alt="корзина">
           <a href="blank.html">Корзина</a>
         </li>
 
       </ul>
     </div>
 
-    <div>
-      <p>
+    <div class="adress-contacts">
+      <img src="./img/footer/yellow_footer_logo.svg" width="164" height="34" alt="logo_yellow">
+
+      <p class="footer-adress">
         Адрес: Санкт-Петербург, набережная
-        реки Карповки, 5, литера П
+        реки Карповки, 5, литера П.
       </p>
-      <ul>
+
+      <p>
+        Телефон: <a class="contacts-phone" href="tel: +7 800 555-86-28">+7 (812) 666-02-66</a>
+      </p>
+      <img src="./img/footer/Rectangle_yellow_footer.svg" width="80" height="7" alt="logo_yellow">
+      <ul class="footer-contacts">
         <li>
-          <a href="#">Доставка</a>
+          <a class="button" href="#">Доставка</a>
         </li>
         <li>
           <a href="#">Гарантия</a>
         </li>
         <li>
-          <a href="#">Контакты</a>
+          <a class="button" href="#">Контакты</a>
         </li>
       </ul>
-      <p>
-        Телефон: <a href="tel: +7 800 555-86-28">+7 (812) 666-02-66</a>
-      </p>
+
     </div>
     <div>
-      <ul>
+      <ul class="footer-sotial">
         <li>
-          <img src="img/img/footer/sotial/twetter.png" width="32" height="32" alt="twetter icon">
-          <a href="#">Твиттер</a>
+          <img src="./img/footer/sotial/twetter.png" width="32" height="32" alt="twetter icon">
+          <a class="social-button" href="#">Твиттер</a>
         </li>
         <li>
-          <img src="img/img/footer/sotial/facebook.png" width="32" height="32" alt="facebook icon">
-          <a href="#">Фейсбук</a>
+          <img src="./img/footer/sotial/facebook.png" width="32" height="32" alt="facebook icon">
+          <a class="social-button" href="#">Фейсбук</a>
         </li>
         <li>
-          <img src="img/img/footer/sotial/instagram.png" width="32" height="32" alt="instagram icon">
-          <a href="#">Инстаграм</a>
+          <img src="./img/footer/sotial/instagram.png" width="32" height="32" alt="instagram icon">
+          <a class="social-button" href="#">Инстаграм</a>
         </li>
       </ul>
-      <a>
-        <img src="img/img/footer/logo_htmlacademy.png" width="115" height="33,03" alt="logo_htmlacademy">
+      <a class="footer-copyright">
+        <img src="./img/footer/logo_htmlacademy.png" width="115" height="33,03" alt="logo_htmlacademy">
       </a>
+      <div class="background-footer" id="rectangle"></div>
     </div>
   </footer>
 </body>
