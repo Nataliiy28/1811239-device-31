@@ -1,0 +1,368 @@
+/* Variables */
+:root {
+
+  --basic-dark: #000000;
+  --basic-dark-background: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --special-yellow: #F7E296;
+  --special-green: #91C92F;
+  --special-yellow-dark: #F0C52E;
+  /* --white 30: #rgba(255, 255, 255, 0.3);
+  --white 60: #rgba(255, 255, 255, 0.6); как прописать полупрозрачные цвета? */
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Global */
+a {
+  color: inherit;
+  text-decoration: none;
+
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url('../fonts/gilroylight.woff2'), url('../fonts/gilroylight.woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url('../fonts/gilroyextrabold.woff2'), url('../fonts/gilroyextrabold.woff');
+  font-weight: 800;
+}
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basic-dark);
+  text-transform: none;
+  background-color: var(--basic-white);
+}
+
+.main-navigation {
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-dark);
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--basic-dark);
+  background-color: transparent;
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.navigation-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit
+}
+
+.site-navigation {
+  list-style-type: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-navigation-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: var(--basic-white);
+}
+
+.navigation-personal {
+  list-style-type: none;
+  text-decoration: none;
+}
+/* Bread crumbs */
+.bread-crumbs {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: none;
+  text-decoration: none;
+  color:var(--basic-dark)
+}
+
+.bread-crumbs {
+  list-style: none;
+}
+
+/* селфи палки */
+.popular-img {
+  width: 97px;
+  height: 55px;
+  display: block;
+  margin-left: center;
+  margin-right: center;
+}
+
+.popular-image-wrap {
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
+}
+/* фильтры */
+.filters {
+  background-color: var(--basic-grey-light);
+}
+
+.filters ul {
+  list-style: none;
+  line-height: 18px;
+}
+/* слайдер */
+.slidebar {
+  list-style: none;
+
+}
+.checkbox-list {
+  list-style: none;
+}
+.container {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.photo-slider {
+  text-align: left;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+
+.slider-right {
+  text-align: right;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.slider-middle {
+  text-align: right;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.slider-left {
+  text-align: right;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.all-slider-card {
+  list-style-type: none;
+}
+/* Catalog */
+
+.features-list {
+  list-style-type: none;
+}
+
+.filters {
+  text-align: left;
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+.filters h3 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.popular-item {
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+.main-catalog-img {
+  list-style-type: none;
+  text-decoration: none;
+}
+.text-inside {
+  list-style-type: none;
+  text-decoration: none;
+}
+/* checkbox */
+.checkbox-square {
+  text-align: left;
+  list-style-type: none;
+  background-color: var(--basic-grey-light);
+}
+
+.checkbox-round {
+  text-align: left;
+  list-style-type: none;
+  background-color: var(--basic-grey-light);
+}
+/* PAGGINATION */
+.pagination-list {
+  list-style: none;
+}
+/* services */
+.services-list {
+  text-align: ;
+  list-style-type: none;
+}
+.services-delivery {
+  text-align: center;
+}
+
+.services-warranty {
+  text-align: center;
+}
+
+.services-credit {
+  text-align: center;
+}
+
+.partner-logo {
+  text-align: center;
+}
+
+/* о нас контакты */
+
+.about-us {
+  text-align: left;
+}
+
+.contacts {
+  text-align: right;
+}
+
+.index-columns {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.index-columns h2 {
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.button-columns {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-dark);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  border: 8px var(--special-yellow-dark);
+  background-image: url("img/icons/Rectangle3.svg");
+}
+
+/* FOOTER */
+.main-footer {
+  color: var(--basic-dark-background);
+  background-color: var(--basic-dark-background);
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.background-footer {
+  width: 220px;
+  height: 120px;
+  background: var(--basic-dark-background);
+}
+
+.footer-contacts a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+
+.footer-icon-menu {
+  text-align: right;
+
+}
+
+
+.footer-adress {
+  text-align: left;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+  background-color: transparent;
+}
+
+.footer-contacts {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-dark);
+  background-color: transparent;
+  font-weight: 300;
+
+}
+
+.contacts-phone {
+  text-align: center;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-white);
+  background-color: transparent;
+
+
+
+}
+
+.footer-sotial {
+  text-align: center;
+  list-style-type: none;
+}
+
+.footer-copyright {
+  text-align: right;
+  list-style-type: none;
+
+
+}
+
+
