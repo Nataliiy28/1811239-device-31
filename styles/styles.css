@@ -54,8 +54,19 @@ a {
   color: var(--basic-dark);
   text-transform: none;
   background-color: var(--basic-white);
-}
 
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+/* Main header */
+
+.header {
+  margin-bottom: 70px;
+  outline: 5px solid rgba(255, 0, 106, 0.664);
+  outline-offset: -5px;
+}
 .main-navigation {
   font-size: 18px;
   line-height: 23px;
@@ -109,6 +120,11 @@ a {
   list-style-type: none;
   text-decoration: none;
 }
+/* Grid */
+
+.page {
+  height: 100%;
+}
 /* Bread crumbs */
 .bread-crumbs {
   font-family: "Open Sans", Arial, sans-serif;
@@ -132,6 +148,7 @@ a {
   margin-left: center;
   margin-right: center;
 }
+
 
 .popular-image-wrap {
   width: 160px;
@@ -238,7 +255,7 @@ a {
 }
 /* services */
 .services-list {
-  text-align: ;
+  text-align:none ;
   list-style-type: none;
 }
 .services-delivery {
@@ -297,6 +314,8 @@ a {
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .background-footer {
