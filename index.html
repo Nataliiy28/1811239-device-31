@@ -21,14 +21,25 @@
     <nav class="main-navigation">
       <div>
         <a class="main-header-logo">
-          <img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE"></a>
-        <form action="#">
-          <label>
-            <input class="site-navigation" type="text" name="поиск" placeholder="Поиск по сайту">
-            <a><img src="./img/icons/icon_search.svg" width="16" height="16" alt="lupa"></a>
-            <button type="button">Найти</button>
-          </label>
-        </form>
+          <img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE черная картинка из букв"></a>
+
+<!-- поисковик вставка -->
+<header class="Header">
+  <form class="Form" action="https://echo.htmlacademy.ru" method="get">
+    <label class="Label" for="search">
+      <span class="A11y-Hidden">Поиск по сайту:</span>
+    </label>
+    <input class="Input Input_type_search" type="search" placeholder="Поиск по сайту" id="search" name="search" required>
+    <button class="Button" type="submit">Найти</button>
+  </form>
+</header>
+
+
+
+
+
+
+
 
 
         <div class="dropdown-menu">
@@ -64,9 +75,9 @@
           </li>
         </ul>
         <ul class="site-navigation">
-          <li><a class="navigation-link" href="blank.html">Доставка</a></li>
-          <li><a class="navigation-link" href="blank.html">Гарантия</a></li>
-          <li><a class="navigation-link" href="price.html">Контакты</a></li>
+          <li class="delivery-button"><a class="navigation-link" href="blank.html">Доставка</a></li>
+          <li class="warranty-button"><a class="navigation-link" href="blank.html">Гарантия</a></li>
+          <li class="contacts-button"><a class="navigation-link" href="price.html">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -318,13 +329,13 @@
         </p>
 
         <ul class="info-list">
-          <li>
+          <li class="business-lines">
             Деловые линии
           </li>
-          <li>
+          <li class="autotrading">
             Автотрейдинг
           </li>
-          <li>
+          <li class="gelroute-expedition">
             ЖелДорЭкспедиция
           </li>
         </ul>
