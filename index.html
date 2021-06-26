@@ -23,29 +23,22 @@
         <a class="main-header-logo">
           <img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE черная картинка из букв"></a>
 
-<!-- поисковик вставка -->
-<header class="Header">
-  <form class="Form" action="https://echo.htmlacademy.ru" method="get">
-    <label class="Label" for="search">
-      <span class="A11y-Hidden">Поиск по сайту:</span>
-    </label>
-    <input class="Input Input_type_search" type="search" placeholder="Поиск по сайту" id="search" name="search" required>
-    <button class="Button" type="submit">Найти</button>
-  </form>
-</header>
-
-
-
-
-
-
-
-
+        <!-- поисковик вставка -->
+        <header class="Header">
+          <form class="Form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="Label" for="search">
+              <span class="A11y-Hidden">Поиск по сайту:</span>
+            </label>
+            <input class="Input Input_type_search" type="search" placeholder="Поиск по сайту" id="search" name="search"
+              required>
+            <button class="Button" type="submit">Найти</button>
+          </form>
+        </header>
 
         <div class="dropdown-menu">
           <a href="price.html" class="navigation-link">Каталог товаров <img src="./img/icons/Vector.svg" width="16"
               height="16" alt="+"></a>
-          <ul class="site-navigation-list">
+          <ul class="submenu">
             <!-- Вложенное меню -->
             <li><a href="price.html">Виртуальная реальность</a></li>
             <li><a href="blank.html">Моноподы для селфи</a></li>
@@ -66,12 +59,12 @@
           </li>
           <li class="navigation-personal-item">
             <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14"
-                height="14" alt="лесница сравнения">Сравнить</a>
+                height="14" alt="черная лесница сравнения мини">Сравнить</a>
 
           </li>
           <li class="navigation-personal-item">
             <a class="navigation-personal-item" href="blank.html"><img src="./img/icons/icon_cart.svg" width="14"
-                height="14" alt="черная корзинка ">Корзина</a>
+                height="14" alt="черная корзинка мини ">Корзина</a>
           </li>
         </ul>
         <ul class="site-navigation">
@@ -91,18 +84,18 @@
         <li class="photo-items">
           <a><img src="./img/slider/slider-3_1_copter.png" width="526" height="334" alt="ч/б квадрокоптер "></a>
           <div class="slider-right">
-            <h1>Порхает как бабочка, жалит как пчела!</h1>
+            <h1 class="title-slider">Порхает как бабочка, жалит как пчела!</h1>
             <p class="benefits-list">
               Этот обычный, на первый взгляд, квадрокоптер оснащен
               мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <a href="#">Подробнее</a>
-            <ul>
+            <a class="button-more" href="#">Подробнее</a>
+            <ul class="details">
 
 
               <li>
                 800 м
-                <p>
+                <p class="details-second">
                   Дальность полета
                 </p>
               </li>
@@ -110,7 +103,7 @@
               <li>
                 50 м
 
-                <p>
+                <p class="details-second">
                   Радиус поражения
                 </p>
               </li>
@@ -123,17 +116,17 @@
           <a><img src="./img/slider/slider-2_1_fitnes_braclet.png" width="345" height="485"
               alt="Черный фитнес браслет"></a>
           <div class="slider-middle">
-            <h1>Худеем правильно!</h1>
+            <h1 class="title-slider">Худеем правильно!</h1>
             <p class="benefits-list">
               Мотивирующие фитнес-браслеты помогут найти в себе силы
               не пропускать занятия и соблюдать диету.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <ul>
+            <a class="button-more" href="#">Подробнее</a>
+            <ul class="details">
               <li>
                 48 часов
               </li>
-              <li>
+              <li class="details-second">
                 Без подзарядки
               </li>
             </ul>
@@ -148,29 +141,29 @@
           <a><img src="./img/slider/slider-1_1_selfy_stik.png" width="384" height="486"
               alt="Штативы, селфи-палки, моноподы черные"></a>
           <div class="slider-left">
-            <h1>Делай селфи, как Бен Стиллер! </h1>
+            <h1 class="title-slider">Делай селфи, как Бен Стиллер! </h1>
             <p class="benefits-list">
               Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <ul>
+            <a class="button-more" href="#">Подробнее</a>
+            <ul class="details">
               <li>
                 8,5 м
-                <p>
+                <p class="details-second">
                   Длина палки
                 </p>
               </li>
 
               <li>
                 5 кг
-                <p>
+                <p class="details-second">
                   Вес палки
                 </p>
               </li>
               <li>
                 Карбон
-                <p>
+                <p class="details-second">
                   Материал
                 </p>
               </li>
@@ -189,7 +182,7 @@
                 alt="желтая карточка с черными очками виртуальной реальности">
             </div>
 
-            <h3>Виртульная реальность</h3>
+            <h3 class="title-catalog">Виртульная реальность</h3>
           </div>
         </li>
 
@@ -200,7 +193,7 @@
                 alt="желтая карточка с черным моноподом">
             </div>
 
-            <h3>Моноподы для селфи</h3>
+            <h3 class="title-catalog">Моноподы для селфи</h3>
           </div>
 
         </li>
@@ -211,7 +204,7 @@
               <img class="popular-imge-actioncam" src="./img/popular/action-camera.svg" width="71" height="87"
                 alt="желтая карточка с чернной экшен камерой ">
             </div>
-            <h3>Экшен-камеры</h3>
+            <h3 class="title-catalog">Экшен-камеры</h3>
           </div>
 
         </li>
@@ -221,7 +214,7 @@
               <img class="popular-imge-fitnessbraclet" src="./img/popular/fitness_bracelet.svg" width="107" height="65"
                 alt="желтая карточка с черным фитнес-браслетом">
             </div>
-            <h3>Фитнес-браслеты</h3>
+            <h3 class="title-catalog">Фитнес-браслеты</h3>
           </div>
 
         </li>
@@ -232,7 +225,7 @@
                 alt="желтая карточка с черными умными часами">
             </div>
 
-            <h3>Умные часы</h3>
+            <h3 class="title-catalog">Умные часы</h3>
           </div>
 
         </li>
@@ -243,7 +236,7 @@
               <img class="popular-imge-quadrocopter" src="./img/popular/quadrocopter.svg" width="132" height="69"
                 alt="copter_phoy">
             </div>
-            <h3>Квадрокоптеры</h3>
+            <h3 class="title-catalog">Квадрокоптеры</h3>
           </div>
 
         </li>
@@ -251,25 +244,27 @@
     </section>
     <!-- services -->
     <section class="services-item">
-      <h2>Доставка</h2>
 
+      <!--  <h2>Доставка</h2>
+   <ul class="list-button-slider">
+        <li class="button-selection-slider">
+          Доставка
+        </li>
+        <li class="button-selection-slider">
+          Гарантия
+        </li>
+        <li class="button-selection-slider">
+          Кредит
+        </li>
+      </ul> -->
 
-      <li>
-        Доставка
-      </li>
-      <li>
-        Гарантия
-      </li>
-      <li>
-        Кредит
-      </li>
 
       <ul class="services-list">
         <li>
 
 
           <!-- Доставка -->
-          <h3>Доставка</h3>
+          <h3 class="title-seond">Доставка</h3>
           <img src="./img/main/delivery_2.svg" width="136" height="164" alt="Бегущий курьер с посылкой/delivery 2">
           <p class="services-delivery">
             Мы с удовольствием доставим ваш товар прямо к вашему
@@ -280,7 +275,7 @@
         </li>
         <li>
           <!-- Гарантия -->
-          <h3>Гарантия</h3>
+          <h3 class="title-seond">Гарантия</h3>
           <img src="./img/main/warranty_1.svg" width="136" height="164" alt="Tools and phone/ warranty 1">
           <p class="services-warranty">
             Если из-за возгорания купленного у нас товара у вас сгорит дом —
@@ -291,7 +286,7 @@
         </li>
         <li>
           <!-- Кредит -->
-          <h3>Кредит</h3>
+          <h3 class="title-seond">Кредит</h3>
           <img src="./img/main/credit_1.svg" width="136" height="164" alt="Человек,тащащий груз/credit 1">
           <p class="services-credit">
             Залезть в долговую яму стало проще! Кредитные консультанты
@@ -339,7 +334,7 @@
             ЖелДорЭкспедиция
           </li>
         </ul>
-        <a class="button-columns" href="#">Подробнее о нас</a>
+        <a class="button-more" href="#">Подробнее о нас</a>
       </section>
 
       <section class="contacts">
@@ -351,7 +346,7 @@
         </p>
         <div class="map">
           <img src="./img/map/map 1.jpg" width="560" height="222" alt="фото карты">
-          <a class="button-columns" href="blank.html">Напиши нам</a>
+          <a class="button-more" href="blank.html">Напиши нам</a>
         </div>
       </section>
     </section>
@@ -361,7 +356,7 @@
   <footer class="main-footer">
 
     <div class="footer-icon-menu">
-      <ul>
+      <ul class="menu-ic">
         <li>
           <img src="./img/footer/login_person.svg" width="9" height="10" alt="желтая иконка входа">
           <a href="blank.html">Войти</a>
@@ -379,18 +374,19 @@
     </div>
 
     <div class="adress-contacts">
-      <img src="./img/footer/yellow_footer_logo.svg" width="164" height="34" alt="logo_yellow">
+      <img class="yellow-footer-logo" src="./img/footer/yellow_footer_logo.svg" width="164" height="34"
+        alt="logo_yellow">
       <p class="footer-adress">
         Адрес: Санкт-Петербург, набережная
         реки Карповки, 5, литера П.
       </p>
       <img src="./img/footer/Rectangle_yellow_footer.svg" width="80" height="7" alt="logo_yellow">
-      <ul class="footer-contacts">
+      <ul class="footer-contacts-button">
         <li>
           <a class="button" href="#">Доставка</a>
         </li>
         <li>
-          <a href="#">Гарантия</a>
+          <a class="button" href="#">Гарантия</a>
         </li>
         <li>
           <a class="button" href="#">Контакты</a>
