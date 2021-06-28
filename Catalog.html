@@ -16,18 +16,22 @@
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<body class="page-body inner-page">
+<body class="page-body-inner-page">
   <header class="header">
     <nav class="main-navigation">
       <div>
         <a class="main-header-logo"><img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE"></a>
-        <form action="#">
-          <label>
-            <input class="site-navigation" type="text" name="поиск" placeholder="Поиск по сайту">
-            <a><img src="./img/icons/icon_search.svg" width="16" height="16" alt="lupa"></a>
-            <button type="button">Найти</button>
-          </label>
-        </form>
+        <!-- поисковик вставка -->
+        <header class="Header">
+          <form class="Form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="Label" for="search">
+              <span class="A11y-Hidden">Поиск по сайту:</span>
+            </label>
+            <input class="Input Input_type_search" type="search" placeholder="Поиск по сайту" id="search" name="search"
+              required>
+            <button class="Button" type="submit">Найти</button>
+          </form>
+        </header>
 
 
         <div class="dropdown-menu">
@@ -78,33 +82,35 @@
   <main>
     <!-- Хлебные крошки -->
     <div class="bread-crumbs">
-      <h1>Моноподы для селфи</h1>
-      <ul>
-        <li>
+      <h1 class="header-breadcrumbs-1">Моноподы для селфи</h1>
+      <ul class="bread-crumbs-list">
+        <li class="br-cr-list">
           <a href="blank.html">Главная </a>
           <a><img src="/img/main/arrow_breadcrumbs.svg"></a>
         </li>
-        <li>
+        <li class="br-cr-list-catalog">
           <a href="blank.html">Каталог</a>
           <a><img src="/img/main/arrow_breadcrumbs.svg"></a>
         </li>
-        <li>
+        <li class="br-cr-list-monopodselfy">
           <a href="price.html">Моноподы для селфи</a>
         </li>
       </ul>
     </div>
 
     <!-- Фильтр -->
-    <div class="filters">
-      <ul>
+    <div class="filters-bold">
+      <ul class="filters-main-bold">
         <li>
           <a href="catalog.html">Фильтр:</a>
-
         </li>
         <li>
           <a href="catalog.html">Сортировка:</a>
         </li>
-
+      </ul>
+    </div>
+    <div class="filters">
+      <ul>
         <li>
           <a href="catalog.html">По цене</a>
         </li>
@@ -128,7 +134,7 @@
       <form method="get" action="https://echo.htmlacademy.ru">
         <input type="range" min="0" max="5000" value="50" class="slider" id="myRange">
         <fieldset class="checkbox-square">
-          <legend>Цвет:</legend>
+          <legend class="titile-legend">Цвет:</legend>
           <ul class="checkbox-list">
             <li>
               <input type="checkbox" name="Черный" id="Цвет черный" checked>
@@ -158,8 +164,8 @@
         </fieldset>
         <!-- Чекбокс круглый -->
         <fieldset class="checkbox-round">
-          <legend>Bluetooth:</legend>
-          <ul>
+          <legend class="titile-legend">Bluetooth:</legend>
+          <ul class="checkbox-round-item">
             <li>
               <input type="radio" checked name="Bluetooth checkbox yes" />
               <label for="Yes checkbox Bluetooth">есть</label>
