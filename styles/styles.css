@@ -219,6 +219,11 @@ body {
 
 /* SUBMENU */
 .submenu {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
   list-style-type: none;
   text-decoration: none;
   text-transform: none;
@@ -230,7 +235,8 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
+  opacity: 0.6;
 }
 .submenu:active {
   font-family: Open Sans;
@@ -238,7 +244,8 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 1) opacity rgba(0, 0, 0, 0.3);
+  color: #000000;
+  opacity: 0.3;
 }
 /* ВЫПАДАЮЩЕЕ МЕНЮ */
 .dropdown-menu {
@@ -324,6 +331,11 @@ body {
 
 /* блок доставка/ гарантия/контакты */
 .site-navigation {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
   list-style-type: none;
   text-decoration: none;
   text-transform: none;
@@ -445,18 +457,117 @@ body {
   height: 100%;
 }
 /* Bread crumbs */
+/* ЗАГОЛОВОК 1 */
+.header-breadcrumbs-1 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
 .bread-crumbs {
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 300;
   font-size: 14px;
   line-height: 19px;
+  color: var(--basic-dark);
+  list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+}
+.bread-crumbs-list {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  list-style: none;
+  list-style-type: none;
   text-transform: none;
   text-decoration: none;
   color: var(--basic-dark);
+  opacity: 0.3;
 }
 
-.bread-crumbs {
+/* покой */
+.br-cr-list {
   list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+}
+/* наведение */
+.br-cr-list:hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+}
+/* нажатие */
+.br-cr-list:active {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.1;
+}
+/* ХЛЕБНЫЕКРОШКИ кнопка КАТАЛОГ */
+/* покой */
+.br-cr-list-catalog {
+  list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+}
+/* наведение */
+.br-cr-list-catalog:hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+}
+/* нажатие */
+.br-cr-list-catalog:active {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.1;
+}
+.br-cr-list-monopodselfy {
+  list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+}
+.br-cr-list-monopodselfy:hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+}
+.br-cr-list-monopodselfy:active {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.1;
 }
 
 /* селфи палки */
@@ -483,8 +594,53 @@ body {
   letter-spacing: 0.05em;
 }
 /* фильтры */
+.filters-bold {
+  list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+}
+.filters-main-bold {
+  list-style: none;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
 .filters {
   background-color: var(--basic-grey-light);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.3;
+}
+.filters:hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.filters:active {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
 }
 
 .filters ul {
@@ -641,7 +797,15 @@ body {
   list-style-type: none;
   text-decoration: none;
 }
+.pic-card:hover {
+  width: 160px;
+  height: 160px;
+  color: rgba(240, 197, 46, 1);
+}
+.pic-card:active {
 
+  color: rgba(240, 197, 46, 1);
+}
 .main-catalog-img {
   list-style-type: none;
   text-decoration: none;
@@ -651,6 +815,15 @@ body {
   text-decoration: none;
 }
 /* checkbox */
+.titile-legend {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
 .checkbox-square {
   text-align: left;
   list-style-type: none;
@@ -658,9 +831,19 @@ body {
 }
 
 .checkbox-round {
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
   text-align: left;
   list-style-type: none;
   background-color: var(--basic-grey-light);
+}
+.checkbox-round-item {
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: left;
+  list-style-type: none;
 }
 /* PAGGINATION */
 .pagination-list {
