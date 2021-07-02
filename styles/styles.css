@@ -11,6 +11,16 @@
   --special-yellow-dark: #f0c52e;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
@@ -43,8 +53,7 @@ a {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -61,30 +70,23 @@ a {
 /* Logo */
 
 .main-header-logo {
-  outline: 5px solid rgba(250, 10, 150, 0.904);
-  outline-offset: -5px;
-  order: 2;
-}
-.main-header-logo:hover {
   width: 163px;
   height: 35px;
-  left: 500px;
-  top: 20px;
+}
+
+.main-header-logo:hover {
   opacity: 0.6;
 }
+
 .main-header-logo:active {
-  width: 163px;
-  height: 35px;
-  left: 800px;
-  top: 20px;
   opacity: 0.3;
 }
+
 /* Main header */
 .header {
   margin-bottom: 70px;
-  outline: 5px solid rgba(255, 0, 106, 0.664);
-  outline-offset: -5px;
 }
+
 .main-navigation {
   font-size: 18px;
   line-height: 23px;
@@ -92,21 +94,14 @@ a {
   background-color: transparent;
   display: grid;
 }
+
 /* поиск по сайту */
-.Header {
+.search {
   box-sizing: border-box;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
+  padding: 34px 60px;
+  background-color: hsl(47, 86%, 78%);
 }
 
 .A11y-Hidden {
@@ -122,20 +117,14 @@ body {
   clip-path: inset(100%);
 }
 
-.Header {
-  min-height: 100vh;
-  padding: 34px 60px;
-  background-color: hsl(47, 86%, 78%);
-}
-
-.Form {
+.form-search {
   position: relative;
   width: 440px;
   font-size: 15px;
   line-height: 30px;
 }
 
-.Label::before {
+.label-search::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -147,7 +136,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.Input {
+.input {
   font: inherit;
   width: 440px;
   padding-top: 7px;
@@ -160,25 +149,25 @@ body {
   background-color: hsla(0, 50%, 50%, 0);
 }
 
-.Input:focus {
+.input:focus {
   border-bottom: 2px solid hsla(0, 0%, 0%, 1);
   outline: none;
 }
 
-.Input:not(:valid) {
+.input:not(:valid) {
   box-shadow: none;
   outline: none;
 }
 
-.Input_type_search::placeholder {
+.input_type_search::placeholder {
   color: hsl(0, 0%, 0%, 0.3);
 }
 
-.Input_type_search:focus::placeholder {
+.input_type_search:focus::placeholder {
   color: hsl(0, 0%, 0%, 0.6);
 }
 
-.Button {
+.button-search {
   position: absolute;
   top: 0;
   right: 0;
@@ -193,33 +182,33 @@ body {
   opacity: 0;
 }
 
-.Input:focus + .Button,
-.Input:valid + .Button,
-.Button:hover,
-.Button:focus,
-.Button:active {
+.input:focus+.button-search,
+.input:valid+.button-search,
+.button-search:hover,
+.button-search:focus,
+.button-search:active {
   opacity: 1;
 }
 
-.Button::-moz-focus-inner {
+.button-search::-moz-focus-inner {
   border: 0;
 }
 
-.Button:hover,
-.Button:focus,
-.Button:active {
+.button-search:hover,
+.button-search:focus,
+.button-search:active {
   outline: 0;
   color: hsla(0, 0%, 100%, 1);
   background-color: hsl(0, 0%, 0%);
 }
 
-.Button:active {
+.button-search:active {
   color: hsla(0, 0%, 100%, 0.3);
 }
 
 /* SUBMENU */
 .submenu {
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -228,31 +217,20 @@ body {
   text-decoration: none;
   text-transform: none;
   color: var(--basic-dark);
+  margin: 0;
+  padding: 0;
 }
-.submenu:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: #000000;
+
+.submenu-item:hover {
   opacity: 0.6;
 }
-.submenu:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: #000000;
+
+.submenu-item:active {
   opacity: 0.3;
 }
+
 /* ВЫПАДАЮЩЕЕ МЕНЮ */
 .dropdown-menu {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
   line-height: 20px;
   list-style-type: none;
   text-decoration: none;
@@ -261,37 +239,28 @@ body {
 
 /* ПЕРСОНАЛЬНАЯ НАВИГАЦИЯ войти */
 .navigation-personal {
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0, 3);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
+
 .navigation-personal-item {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0, 3);
+  color: var(--basic-dark);
 }
 
 .navigation-personal-item:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0, 6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .navigation-personal-item:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: var(--basic-dark);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-navigation-wrapper {
@@ -308,275 +277,77 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.navigation-link:active {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
+
+.navigation-link:hover {
   opacity: 0.6;
 }
-.navigation-link:hover {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
+
+.navigation-link:active {
   opacity: 0.3;
 }
 
 /* блок доставка/ гарантия/контакты */
 .site-navigation {
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
   list-style-type: none;
-  text-decoration: none;
-  text-transform: none;
-}
-/* КНОПКА ДОСТАВКА */
-.delivery-button {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  width: 160px;
-  height: 8px;
-  letter-spacing: 0.2em;
-  padding: 9px 43px;
-  display: inline-block;
-  text-transform: uppercase;
-  color: var(--basic-dark);
-}
-/* кнопка нажатая */
-.delivery-button:active {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 1) opacity 0.3;
-}
-/* кнопка при наведение */
-.delivery-button:hover {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.3);
-  opacity: 0.6;
-}
-/* .delivery-button::before {
-  content: "";
-  display: block;
-  width: 160px;
-  height: 8px;
-  background: var(--special-yellow-dark);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  right: 0;
-  z-index: -1;
-} */
-
-/* КНОПКА ГАРАНТИЯ */
-.warranty-button {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
+  margin: 0;
+  padding: 0;
 }
 
-.warranty-button:active {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-}
-.warranty-button:hover {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 1);
-  opacity: 0.6;
-}
-/* КНОПКА КОНТАКТЫ */
-.contacts-button {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--basic-dark);
-}
-.contacts-button:hover {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 1);
-  opacity: 0.6;
-}
-.contacts-button:active {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 1);
-  opacity: 0.3;
-}
-.navigation-personal {
-  list-style-type: none;
-  text-decoration: none;
-}
-.list-button-slider ul {
-  list-style-type: none;
-}
 /* Grid */
 
 .page {
   height: 100%;
 }
+
 /* Bread crumbs */
 /* ЗАГОЛОВОК 1 */
-.header-breadcrumbs-1 {
-  font-family: Gilroy;
+.header-breadcrumbs {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
 }
+
 .bread-crumbs {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
   color: var(--basic-dark);
-  list-style: none;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
 }
+
 .bread-crumbs-list {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
   list-style: none;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
   color: var(--basic-dark);
-  opacity: 0.3;
 }
 
 /* покой */
 .br-cr-list {
-  list-style: none;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
+  opacity: 0.3;
 }
+
 /* наведение */
 .br-cr-list:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
   opacity: 0.6;
 }
+
 /* нажатие */
 .br-cr-list:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  opacity: 0.1;
-}
-/* ХЛЕБНЫЕКРОШКИ кнопка КАТАЛОГ */
-/* покой */
-.br-cr-list-catalog {
-  list-style: none;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
-}
-/* наведение */
-.br-cr-list-catalog:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  opacity: 0.6;
-}
-/* нажатие */
-.br-cr-list-catalog:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  opacity: 0.1;
-}
-.br-cr-list-monopodselfy {
-  list-style: none;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
-}
-.br-cr-list-monopodselfy:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  opacity: 0.6;
-}
-.br-cr-list-monopodselfy:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
   opacity: 0.1;
 }
 
+
 /* селфи палки */
 .popular-img {
-  width: 97px;
-  height: 55px;
   display: block;
-  margin-left: center;
-  margin-right: center;
 }
 
 .popular-image-wrap {
@@ -584,15 +355,23 @@ body {
   height: 160px;
   background-color: var(--special-yellow);
 }
+.popular-image-wrap:hover {
+  background-color: var(--special-yellow-dark);
+}
+.popular-image-wrap:active .popular-img{
+ opacity: 0.3;
+}
+
 /* надписи карточек желтых каталога */
 .title-catalog {
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
 }
+
 /* фильтры */
 .filters-bold {
   list-style: none;
@@ -600,6 +379,7 @@ body {
   text-transform: none;
   text-decoration: none;
 }
+
 .filters-main-bold {
   list-style: none;
   list-style-type: none;
@@ -614,9 +394,10 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
+
 .filters {
   background-color: var(--basic-grey-light);
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -624,36 +405,29 @@ body {
   color: #000000;
   opacity: 0.3;
 }
+
 .filters:hover {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
   opacity: 0.6;
 }
 
 .filters:active {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
+  opacity: 1;
 }
 
 .filters ul {
   list-style: none;
   line-height: 18px;
 }
+
 /* слайдер */
 .slidebar {
   list-style: none;
 }
+
 .checkbox-list {
   list-style: none;
 }
+
 .container {
   list-style-type: none;
   text-decoration: none;
@@ -670,6 +444,7 @@ body {
   list-style-type: none;
   text-decoration: none;
 }
+
 /* ЗАГОЛОВОК СЛАЙДЕРА коптер,палки,браслет */
 .title-slider {
   font-family: Gilroy;
@@ -678,14 +453,16 @@ body {
   font-size: 47px;
   line-height: 58px;
 }
+
 /* ОСНОВНОЙ ТЕКСТ ПОД СЛАЙДЕРОМ */
 .benefits-list {
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
 }
+
 .details {
   font-family: Gilroy;
   font-style: normal;
@@ -694,6 +471,7 @@ body {
   line-height: 42px;
   color: var(--basic-dark);
 }
+
 .details-second {
   font-family: Gilroy;
   font-style: normal;
@@ -701,6 +479,7 @@ body {
   font-size: 13px;
   line-height: 15px;
 }
+
 .slider-middle {
   text-align: right;
   list-style-type: none;
@@ -712,53 +491,42 @@ body {
   list-style-type: none;
   text-decoration: none;
 }
+
 /* кнопка подробнее покой*/
 
 .button-more {
-  outline: 4px solid rgba(250, 10, 150, 0.904);
-  outline-offset: -5px;
-  order: 2;
-}
-.button-more {
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background-color: var(--special-yellow-dark);
-  width: 220px;
-  height: 8px;
+  padding: 9px 20px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.button-more-big {
+  min-width: 260px;
+}
+.button-more-middle {
+  min-width: 220px;
+}
+.button-more-small {
+  min-width: 160px;
 }
 /* кнопка подробнее наведение*/
 .button-more:hover {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
   background: var(--special-yellow-dark);
-  color: rgba(0, 0, 0, 0, 3);
-  width: 220px;
-  height: 40px;
 }
 
 /* кнопка подробнее нажатие*/
 .button-more:active {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background-color: #f0c52e;
-  width: 220px;
-  height: 40px;
+  background: var(--special-yellow-dark);
+  color: rgb(240, 197, 46, 0.3);
 }
+
 .button-more::before {
   content: "";
   background: var(--special-yellow-dark);
@@ -772,10 +540,17 @@ body {
   transform: translateY(-50%);
   z-index: -1;
 }
+
+.list-button-slider{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /* catalog 2 page */
 .all-slider-card li {
   list-style-type: none;
 }
+
 /* Catalog */
 
 .features-list {
@@ -796,24 +571,20 @@ body {
 .popular-item {
   list-style-type: none;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
-.pic-card:hover {
-  width: 160px;
-  height: 160px;
-  color: rgba(240, 197, 46, 1);
-}
-.pic-card:active {
 
-  color: rgba(240, 197, 46, 1);
-}
 .main-catalog-img {
   list-style-type: none;
   text-decoration: none;
 }
+
 .text-inside {
   list-style-type: none;
   text-decoration: none;
 }
+
 /* checkbox */
 .titile-legend {
   font-family: Gilroy;
@@ -824,6 +595,7 @@ body {
   letter-spacing: 0.1em;
   color: #000000;
 }
+
 .checkbox-square {
   text-align: left;
   list-style-type: none;
@@ -838,6 +610,7 @@ body {
   list-style-type: none;
   background-color: var(--basic-grey-light);
 }
+
 .checkbox-round-item {
   list-style: none;
   list-style-type: none;
@@ -845,45 +618,29 @@ body {
   text-align: left;
   list-style-type: none;
 }
+
 /* PAGGINATION */
 .pagination-list {
   list-style: none;
 }
+
 /* services */
 .services-list {
-  text-align: none;
   list-style-type: none;
 }
+
 /* заголовки доставка гарантия кредит */
-.title-seond {
-  font-family: Gilroy;
+.title-second {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
 }
-.services-delivery {
-  text-align: center;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 30px;
-}
 
-.services-warranty {
-  text-align: center;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 30px;
-}
-
-.services-credit {
-  text-align: center;
-  font-family: Open Sans;
+.services-text {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -906,14 +663,15 @@ body {
 
 .index-columns {
   color: var(--basic-black);
-  background-color: var(--basic-white);
-  background-position: 0 0;
-  background-repeat: repeat;
 }
 
-.index-columns h2 {
+.index-columns-title {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  letter-spacing: 0.2em;
 }
 
 /* FOOTER */
@@ -923,8 +681,6 @@ body {
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
-  outline: 5px solid rgba(16, 148, 255, 0.829);
-  outline-offset: -5px;
 }
 
 .background-footer {
@@ -932,89 +688,43 @@ body {
   height: 120px;
   background: var(--basic-dark-background);
 }
+
 /* футер контакты */
 /* покой */
 .footer-contacts-button {
-  outline: 3px solid rgba(5, 245, 145, 0.979);
-  outline-offset: 40px;
-  order: 4;
-  padding: 10;
-  margin: 10;
   text-align: center;
 }
+
 .footer-contacts-button {
-  list-style-type: none;
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  width: 160px;
-  height: 8px;
-  letter-spacing: 0.2em;
-  padding: 9px 43px;
-  display: inline-block;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   color: var(--basic-white);
 }
-/* кнопка нажатая */
-.footer-contacts-button:active {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0, 3);
-}
-/* кнопка при наведение */
-.footer-contacts-button:hover {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0, 6);
-}
-.footer-contacts a {
-  color: rgba(255, 255, 255, 0, 7);
-  text-decoration: none;
-}
+
+
 
 .footer-contacts a:hover,
 .footer-contacts a:focus {
   text-decoration: none;
 }
-.menu-ic {
-  list-style-type: none;
-  text-decoration: none;
-}
-.footer-icon-menu {
-  outline: 3px solid rgba(16, 198, 211, 0.904);
-  outline-offset: 15px;
-  order: 2;
 
+.menu-icon {
   list-style-type: none;
-  text-align: right;
-  text-decoration-style: none;
-  color: rgba(255, 255, 255, 0, 7);
-  opacity: 0.7;
+  margin: 0;
+  padding: 0;
 }
-.footer-icon-menu:hover {
-  list-style-type: none;
-  text-align: right;
-  text-decoration-style: none;
+.menu-icon-link{
+  color: rgba(255, 255, 255, 0.7);
+}
+.menu-icon-link:hover {
   color: rgba(255, 255, 255, 1);
 }
-.footer-icon-menu:active {
-  list-style-type: none;
-  text-align: right;
-  text-decoration-style: none;
-  color: rgba(255, 255, 255, 0, 3);
+.menu-icon:active {
+  color: rgba(255, 255, 255, 0.3);
 }
+
+
 .footer-adress {
   text-align: left;
   text-transform: none;
@@ -1029,69 +739,68 @@ body {
   text-transform: none;
   color: var(--basic-white);
   background-color: transparent;
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
 }
+
 /* лого соц.сетей */
-.footer-sotial {
-  outline: 3px solid rgba(250, 246, 10, 0.747);
-  outline-offset: 10px;
-  border: 2;
+.footer-socials {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
-.footer-sotial {
-  text-align: center;
-  list-style-type: none;
-  color: rgba(255, 255, 255, 0, 3);
+
+.social-icon{
+  opacity: 0.3;
 }
-.footer-sotial:active {
-  color: rgba(255, 255, 255, 0, 1);
+.social-icon:hover {
+  opacity: 0.1;
 }
-.footer-sotial:hover {
-  color: rgba(255, 255, 255, 0, 6);
+.social-icon:active {
+  opacity: 0.6;
 }
+
 /* LOGO HTML Academy */
 
-.footer-copyright {
-  outline: 3px solid rgba(5, 245, 145, 0.979);
-  outline-offset: 15px;
-  order: 4;
-}
 .footer-copyright {
   text-align: right;
   list-style-type: none;
   color: var(--special-yellow-dark);
 }
+
 .footer-copyright:hover {
   color: rgba(240, 197, 46, 1);
   opacity: 0.6;
 }
+
 .footer-copyright:active {
   color: rgba(240, 197, 46, 1);
   opacity: 0.3;
 }
+
 /* mini list */
-ul.info-list {
+.info-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-ul.info-list li {
+.info-item {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
   display: flex;
   align-items: center;
+
 }
 
-.info-list {
-  display: flex;
-  align-items: center;
-}
 /* КРУЖОК список деловые линии   */
-.business-lines::before {
+.info-item::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -1102,48 +811,18 @@ ul.info-list li {
   color: rgba(229, 229, 229, 1);
   margin-right: 10px;
 }
-/* КРУЖОК список автотрейдинг */
-.autotrading::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border: solid;
-  border-radius: 50%;
-  background: #ffffff;
-  display: block;
-  color: rgba(229, 229, 229, 1);
-}
 
-/* КРУЖОК желдорэкспедиция */
-.gelroute-expedition::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border: solid;
-  border-radius: 50%;
-  background: #ffffff;
-  display: block;
-  color: rgba(229, 229, 229, 1);
-}
+
 /* LOGO YELLOW FOOTER */
 .yellow-footer-logo {
-  outline: 5px solid rgba(250, 10, 150, 0.904);
-  outline-offset: -5px;
-  order: 2;
+  width: 163px;
+  height: 35px;
 }
+
 .yellow-footer-logo:hover {
-  width: 163px;
-  height: 35px;
-  left: 500px;
-  top: 20px;
   opacity: 0.6;
-  color: rgba(240, 197, 46, 1);
 }
+
 .yellow-footer-logo:active {
-  width: 163px;
-  height: 35px;
-  left: 800px;
-  top: 20px;
   opacity: 0.3;
-  color: rgba(240, 197, 46, 1);
 }
