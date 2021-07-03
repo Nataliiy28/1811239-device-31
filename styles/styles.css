@@ -680,7 +680,7 @@ a {
   line-height: 19px;
 }
 /* Кнопка показать */
-/*    .button-search {
+   .button-search {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -694,22 +694,14 @@ a {
   text-align: center;
 
 }
-.button-search{
-  min-width: 260px;
-}
-.button-search-middle {
-  min-width: 220px;
-}
-.button-search-small {
-  min-width: 160px;
-}
+
 /* кнопка подробнее наведение*/
-/*   .button-search:hover {
+  .button-search:hover {
   background: var(--special-yellow-dark);
 }
 
 /* кнопка подробнее нажатие*/
-/* .button-search:active {
+ .button-search:active {
   background: var(--special-yellow-dark);
   color: rgb(240, 197, 46, 0.3);
 }
@@ -726,7 +718,7 @@ a {
   right: 0;
   transform: translateY(-50%);
   z-index: -1;
-} */
+}
 
 /* PAGGINATION */
 /*ОБЩИЙ БЛОК ПАГИНАЦИИ */
