@@ -182,8 +182,8 @@ a {
   opacity: 0;
 }
 
-.input:focus+.button-search,
-.input:valid+.button-search,
+.input:focus + .button-search,
+.input:valid + .button-search,
 .button-search:hover,
 .button-search:focus,
 .button-search:active {
@@ -344,7 +344,6 @@ a {
   opacity: 0.1;
 }
 
-
 /* селфи палки */
 .popular-img {
   display: block;
@@ -358,8 +357,8 @@ a {
 .popular-image-wrap:hover {
   background-color: var(--special-yellow-dark);
 }
-.popular-image-wrap:active .popular-img{
- opacity: 0.3;
+.popular-image-wrap:active .popular-img {
+  opacity: 0.3;
 }
 
 /* надписи карточек желтых каталога */
@@ -418,7 +417,32 @@ a {
   list-style: none;
   line-height: 18px;
 }
-
+/* ТРЕУГОЛЬНАЯ КНОПКА */
+.triangel {
+  height: 11px;
+  width: 10px;
+  left: 3px;
+  top: 14px;
+  border-radius: 0px;
+  background: var(--basic-dark);
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+.triangel:hover {
+  opacity: 0.4;
+}
+.triangel:active {
+  color: var(--basic-dark);
+}
+.triangel::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border: 10px solid transparent;
+  border-top: 10px solid #000000;
+}
 /* слайдер */
 .slidebar {
   list-style: none;
@@ -426,8 +450,17 @@ a {
 
 .checkbox-list {
   list-style: none;
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
 }
-
+.box {
+  border: 2px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
 .container {
   list-style-type: none;
   text-decoration: none;
@@ -447,7 +480,7 @@ a {
 
 /* ЗАГОЛОВОК СЛАЙДЕРА коптер,палки,браслет */
 .title-slider {
-  font-family: Gilroy;
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -464,7 +497,7 @@ a {
 }
 
 .details {
-  font-family: Gilroy;
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
@@ -473,7 +506,7 @@ a {
 }
 
 .details-second {
-  font-family: Gilroy;
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -541,7 +574,7 @@ a {
   z-index: -1;
 }
 
-.list-button-slider{
+.list-button-slider {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -584,7 +617,30 @@ a {
   list-style-type: none;
   text-decoration: none;
 }
-
+/* название карточек */
+.text-inside {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+.price-add {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+}
+.price {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
 /* checkbox */
 .titile-legend {
   font-family: Gilroy;
@@ -617,11 +673,137 @@ a {
   text-decoration: none;
   text-align: left;
   list-style-type: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}
+/* Кнопка показать */
+/*    .button-search {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+}
+.button-search{
+  min-width: 260px;
+}
+.button-search-middle {
+  min-width: 220px;
+}
+.button-search-small {
+  min-width: 160px;
+}
+/* кнопка подробнее наведение*/
+/*   .button-search:hover {
+  background: var(--special-yellow-dark);
 }
 
+/* кнопка подробнее нажатие*/
+/* .button-search:active {
+  background: var(--special-yellow-dark);
+  color: rgb(240, 197, 46, 0.3);
+}
+
+.submit::before {
+  content: "";
+  background: var(--special-yellow-dark);
+  height: 8px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+} */
+
 /* PAGGINATION */
+/*ОБЩИЙ БЛОК ПАГИНАЦИИ */
+.pagination-item {
+  background: #ebebeb;
+}
+
 .pagination-list {
   list-style: none;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  opacity: 0.3;
+}
+.pagination-list:hover {
+  opacity: 0.6;
+}
+.pagination-list:active {
+  color: var(--basic-dark);
+}
+
+/* КНОПКИ ВПЕРЕД НАЗАД  */
+.button-pagination-item {
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.button-pagination {
+  width: 120px;
+  height: 70px;
+  background-color: #d9d9d9;
+  border: none;
+  color: #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* кнопка назад/вперед наведение*/
+.button-pagination:hover {
+  width: 120px;
+  height: 70px;
+  color: var(--basic-dark);
+  background: #d9d9d9;
+}
+
+/* кнопка назад/вперед нажатие*/
+.button-pagination:active {
+  width: 120px;
+  height: 70px;
+  background: rgba(217, 217, 217, 1);
+  color: var(--basic-dark-background);
+}
+
+.button-pagination::before {
+  content: "";
+  background: var(--special-yellow-dark);
+  height: 8px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 /* services */
@@ -702,19 +884,24 @@ a {
   color: var(--basic-white);
 }
 
-
-
 .footer-contacts a:hover,
 .footer-contacts a:focus {
   text-decoration: none;
 }
-
+.menu-icon {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white);
+}
 .menu-icon {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.menu-icon-link{
+.menu-icon-link {
   color: rgba(255, 255, 255, 0.7);
 }
 .menu-icon-link:hover {
@@ -724,17 +911,20 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-
 .footer-adress {
   text-align: left;
   text-transform: none;
-  font-size: 18px;
-  line-height: 23px;
   color: var(--basic-white);
   background-color: transparent;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .contacts-phone {
+  list-style-type: none;
   text-align: right;
   text-transform: none;
   color: var(--basic-white);
@@ -745,7 +935,6 @@ a {
   font-size: 15px;
   line-height: 20px;
 }
-
 /* лого соц.сетей */
 .footer-socials {
   padding: 0;
@@ -753,7 +942,7 @@ a {
   list-style: none;
 }
 
-.social-icon{
+.social-icon {
   opacity: 0.3;
 }
 .social-icon:hover {
@@ -796,7 +985,6 @@ a {
   line-height: 28px;
   display: flex;
   align-items: center;
-
 }
 
 /* КРУЖОК список деловые линии   */
@@ -811,7 +999,6 @@ a {
   color: rgba(229, 229, 229, 1);
   margin-right: 10px;
 }
-
 
 /* LOGO YELLOW FOOTER */
 .yellow-footer-logo {
