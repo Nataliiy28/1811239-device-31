@@ -11,6 +11,13 @@
   --special-yellow-dark: #f0c52e;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 html {
   box-sizing: border-box;
 }
@@ -66,16 +73,31 @@ a {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
+/* main page */
+.main-header {
+  margin-bottom: 70px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
 
 /* Logo */
 
 .main-header-logo {
   width: 163px;
   height: 35px;
+
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+
+  order: 1;
+  justify-self: center;
 }
 
 .main-header-logo:hover {
   opacity: 0.6;
+
+
 }
 
 .main-header-logo:active {
@@ -83,7 +105,7 @@ a {
 }
 
 /* Main header */
-.header {
+.main-header {
   margin-bottom: 70px;
 }
 
@@ -93,6 +115,8 @@ a {
   color: var(--basic-dark);
   background-color: transparent;
   display: grid;
+
+
 }
 
 /* поиск по сайту */
@@ -330,6 +354,7 @@ a {
 }
 
 /* покой */
+
 .br-cr-list {
   opacity: 0.3;
 }
@@ -343,7 +368,16 @@ a {
 .br-cr-list:active {
   opacity: 0.1;
 }
-
+li.br-cr-list::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 7px;
+  background-image: url(http://127.0.0.1:5500/img/main/arrow_breadcrumbs.svg);
+}
+.br-cr-list::last-chaeld::after {
+  display: none;
+}
 /* селфи палки */
 .popular-img {
   display: block;
@@ -362,6 +396,9 @@ a {
 }
 
 /* надписи карточек желтых каталога */
+.filters-header {
+  background-color: var(--basic-grey-light);
+}
 .title-catalog {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -372,14 +409,23 @@ a {
 }
 
 /* фильтры */
-.filters-bold {
+.title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.filter-wrap {
   list-style: none;
   list-style-type: none;
   text-transform: none;
   text-decoration: none;
 }
 
-.filters-main-bold {
+.filter-wrap {
   list-style: none;
   list-style-type: none;
   text-transform: none;
@@ -392,57 +438,64 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000000;
+  background-color: rgba(220, 220, 220, 1);
 }
 
-.filters {
-  background-color: var(--basic-grey-light);
+.sort-wrap {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
-  opacity: 0.3;
+  list-style-type: none;
+  background: var(--basic-grey-light);
 }
 
-.filters:hover {
+.sort:hover {
   opacity: 0.6;
 }
 
-.filters:active {
+.sort:active {
   opacity: 1;
 }
 
-.filters ul {
+.sort ul {
   list-style: none;
   line-height: 18px;
 }
+.sort-list {
+  list-style-type: none;
+}
 /* ТРЕУГОЛЬНАЯ КНОПКА */
 .triangel {
-  height: 11px;
-  width: 10px;
-  left: 3px;
-  top: 14px;
-  border-radius: 0px;
-  background: var(--basic-dark);
-  padding: 20px;
-  position: relative;
-  color: #fff;
+  display: flex;
 }
-.triangel:hover {
+
+.previous,
+.next {
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: none;
+  border: 5px solid transparent;
+  border-bottom: none;
+  border-top: 10px solid var(--basic-dark);
+  opacity: 0.2;
+}
+.previous:hover,
+.next:hover {
   opacity: 0.4;
 }
-.triangel:active {
-  color: var(--basic-dark);
+.previous:active,
+.next:active,
+.triangle-active {
+  opacity: 1;
 }
-.triangel::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  bottom: -20px;
-  border: 10px solid transparent;
-  border-top: 10px solid #000000;
+.next {
+  transform: rotate(-180deg);
 }
+
 /* слайдер */
 .slidebar {
   list-style: none;
@@ -573,7 +626,10 @@ a {
   transform: translateY(-50%);
   z-index: -1;
 }
-
+.in-cart {
+  z-index: 2;
+  position: relative;
+}
 .list-button-slider {
   margin: 0;
   padding: 0;
@@ -600,6 +656,37 @@ a {
   font-size: 18px;
   line-height: 22px;
 }
+/* checkbox */
+.checkbox-fake {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+}
+.checkbox-input:checked + .checkbox-fake::before {
+  content: "";
+  border: var(--basic-grey-light);
+  width: 14px;
+  height: 11px;
+  display: block;
+  background-image: url("../img/icons/Check_mark.svg");
+  background-size: contain;
+}
+.label-input {
+  display: flex;
+  align-items: center;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 19px;
+}
 
 .popular-item {
   list-style-type: none;
@@ -608,11 +695,40 @@ a {
   padding: 0;
 }
 
-.main-catalog-img {
+.product-list {
   list-style-type: none;
   text-decoration: none;
 }
-
+.product-button {
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 360px;
+  height: 381px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.product-button:hover {
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 360px;
+  height: 381px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+li.product-item {
+  position: relative;
+}
+.product-img:hover ~ .product-button .product-button:hover {
+  display: flex;
+}
 .text-inside {
   list-style-type: none;
   text-decoration: none;
@@ -679,32 +795,6 @@ a {
   font-size: 14px;
   line-height: 19px;
 }
-/* Кнопка показать */
-   .button-search {
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 9px 20px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-
-}
-
-/* кнопка подробнее наведение*/
-  .button-search:hover {
-  background: var(--special-yellow-dark);
-}
-
-/* кнопка подробнее нажатие*/
- .button-search:active {
-  background: var(--special-yellow-dark);
-  color: rgb(240, 197, 46, 0.3);
-}
 
 .submit::before {
   content: "";
@@ -745,15 +835,18 @@ a {
 
 /* КНОПКИ ВПЕРЕД НАЗАД  */
 .button-pagination-item {
+  background: none;
+  border: none;
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 800;
   line-height: 20px;
   letter-spacing: 0.1em;
-  text-align: left;
 }
 .button-pagination {
+  background: none;
+  border: none;
   width: 120px;
   height: 70px;
   background-color: #d9d9d9;
@@ -855,6 +948,9 @@ a {
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
+
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .background-footer {
@@ -996,6 +1092,9 @@ a {
 .yellow-footer-logo {
   width: 163px;
   height: 35px;
+
+  outline: 5px solid rgba(255, 0, 0, 0.802);
+  outline-offset: -5px;
 }
 
 .yellow-footer-logo:hover {
@@ -1005,4 +1104,3 @@ a {
 .yellow-footer-logo:active {
   opacity: 0.3;
 }
-/* как сделать кнопки вперед назад? */
