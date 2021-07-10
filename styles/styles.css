@@ -73,31 +73,27 @@ a {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
-/* main page */
-.main-header {
-  margin-bottom: 70px;
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
-}
 
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* Logo */
 
 .main-header-logo {
   width: 163px;
   height: 35px;
-
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
-
   order: 1;
   justify-self: center;
+  position: absolute;
+  top: -20px;
 }
 
 .main-header-logo:hover {
   opacity: 0.6;
-
-
 }
 
 .main-header-logo:active {
@@ -107,6 +103,10 @@ a {
 /* Main header */
 .main-header {
   margin-bottom: 70px;
+  background-color: var(--special-yellow);
+  padding: 44px 60px 88px;
+  margin-top: 40px;
+  position: relative;
 }
 
 .main-navigation {
@@ -114,9 +114,16 @@ a {
   line-height: 23px;
   color: var(--basic-dark);
   background-color: transparent;
-  display: grid;
-
-
+}
+.main-navigation-row {
+  display: flex;
+  align-items: center;
+}
+.main-navigation-row:last-child {
+  margin-bottom: 0;
+}
+.main-navigation-col {
+  flex: 1;
 }
 
 /* поиск по сайту */
@@ -124,8 +131,7 @@ a {
   box-sizing: border-box;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
-  padding: 34px 60px;
-  background-color: hsl(47, 86%, 78%);
+  margin-bottom: 50px;
 }
 
 .A11y-Hidden {
@@ -243,6 +249,7 @@ a {
   color: var(--basic-dark);
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .submenu-item:hover {
@@ -268,17 +275,27 @@ a {
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 0, 3);
+  color: rgba(0, 0, 0, 0.3);
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-decoration: none;
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 10px;
 }
 
 .navigation-personal-item {
   color: var(--basic-dark);
+  margin-right: 40px;
+}
+.navigation-personal-item:first-child {
+  margin-right: auto;
 }
 
+.navigation-personal-item:last-child {
+  margin-left: auto;
+}
 .navigation-personal-item:hover {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -309,6 +326,22 @@ a {
 .navigation-link:active {
   opacity: 0.3;
 }
+.navigation-personal-link::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+.main-navigation-col {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.site-navigation {
+  list-style: none;
+}
 
 /* блок доставка/ гарантия/контакты */
 .site-navigation {
@@ -321,7 +354,18 @@ a {
   margin: 0;
   padding: 0;
 }
-
+ul.site-navigation {
+  display: flex;
+  margin-right: 0;
+  margin-left: auto;
+}
+.site-navigation-item {
+  margin-right: 38px;
+}
+.site-navigation-item:last-child {
+  margin-right: 0;
+  margin-left: auto;
+}
 /* Grid */
 
 .page {
@@ -379,14 +423,26 @@ li.br-cr-list::after {
   display: none;
 }
 /* селфи палки */
+.pic-card {
+  margin: 0;
+  padding: 0;
+}
+.catalog-pic {
+  flex-direction: row;
+}
 .popular-img {
   display: block;
+  display: inline-block;
+  margin-right: 16px;
 }
 
 .popular-image-wrap {
   width: 160px;
   height: 160px;
   background-color: var(--special-yellow);
+  border: 20;
+  margin: 0px;
+  flex-direction: row;
 }
 .popular-image-wrap:hover {
   background-color: var(--special-yellow-dark);
@@ -406,6 +462,10 @@ li.br-cr-list::after {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  margin: 0px;
+  padding: 0;
+  border: 38px;
+  justify-content: space-between;
 }
 
 /* фильтры */
@@ -518,11 +578,23 @@ li.br-cr-list::after {
   list-style-type: none;
   text-decoration: none;
 }
-
+.all-slider-card {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transform: translateY(-150);
+}
+.picture-slider {
+  flex-shrink: 0;
+}
+.hidden {
+  display: none;
+}
 .photo-slider {
   text-align: left;
   list-style-type: none;
   text-decoration: none;
+  transform: translateY(-130px);
 }
 
 .slider-right {
@@ -538,6 +610,8 @@ li.br-cr-list::after {
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  display: flex;
+  align-items: center;
 }
 
 /* ОСНОВНОЙ ТЕКСТ ПОД СЛАЙДЕРОМ */
@@ -548,7 +622,11 @@ li.br-cr-list::after {
   font-size: 15px;
   line-height: 20px;
 }
-
+.details-item {
+  margin-right: 30px;
+  list-style: none;
+  padding: 0;
+}
 .details {
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -556,6 +634,10 @@ li.br-cr-list::after {
   font-size: 36px;
   line-height: 42px;
   color: var(--basic-dark);
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .details-second {
@@ -564,6 +646,10 @@ li.br-cr-list::after {
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .slider-middle {
@@ -624,9 +710,9 @@ li.br-cr-list::after {
   left: 0;
   right: 0;
   transform: translateY(-50%);
-  z-index: -1;
+  /* z-index: -1; */
 }
-.in-cart {
+.button-more-text {
   z-index: 2;
   position: relative;
 }
@@ -681,11 +767,11 @@ li.br-cr-list::after {
   display: flex;
   align-items: center;
 
-font-family: Open Sans;
-font-style: normal;
-font-weight: 300;
-font-size: 14px;
-line-height: 19px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .popular-item {
@@ -693,6 +779,8 @@ line-height: 19px;
   text-decoration: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-list {
@@ -863,16 +951,12 @@ li.product-item {
 
 /* кнопка назад/вперед наведение*/
 .button-pagination:hover {
-  width: 120px;
-  height: 70px;
   color: var(--basic-dark);
   background: #d9d9d9;
 }
 
 /* кнопка назад/вперед нажатие*/
 .button-pagination:active {
-  width: 120px;
-  height: 70px;
   background: rgba(217, 217, 217, 1);
   color: var(--basic-dark-background);
 }
@@ -894,6 +978,7 @@ li.product-item {
 /* services */
 .services-list {
   list-style-type: none;
+  background-image: url(../img/main/background_services.svg);
 }
 
 /* заголовки доставка гарантия кредит */
@@ -922,14 +1007,27 @@ li.product-item {
 
 .about-us {
   text-align: left;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 1250px;
 }
 
 .contacts {
   text-align: right;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
 }
 
-.index-columns {
+.index-columns-wrap {
   color: var(--basic-black);
+  justify-content: space-between;
+	flex-wrap: nowrap;
+	margin: 0;
+	padding: 0;
+	flex-direction: row;
 }
 
 .index-columns-title {
@@ -948,9 +1046,6 @@ li.product-item {
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
-
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
 }
 
 .background-footer {
@@ -1046,6 +1141,10 @@ li.product-item {
   text-align: right;
   list-style-type: none;
   color: var(--special-yellow-dark);
+display: flex;
+
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .footer-copyright:hover {
@@ -1092,9 +1191,6 @@ li.product-item {
 .yellow-footer-logo {
   width: 163px;
   height: 35px;
-
-  outline: 5px solid rgba(255, 0, 0, 0.802);
-  outline-offset: -5px;
 }
 
 .yellow-footer-logo:hover {
