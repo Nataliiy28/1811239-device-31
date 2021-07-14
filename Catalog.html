@@ -18,11 +18,11 @@
 
 <body class="page-body-inner-page">
   <div class="container">
-    <header class="main-header">
+    <header class="header header-inner">
       <nav class="main-navigation">
         <div class="main-navigation-row">
           <div class="main-navigation-col">
-            <a class="main-header-logo">
+            <a class="header-logo">
               <img src="./img/icons/main_black_logo.svg" width="163" height="35"
                 alt="DEVICE черная картинка из букв"></a>
             <div class="search">
@@ -41,6 +41,9 @@
               <li class="navigation-personal-item">
                 <a class="login-link navigation-personal-link" href="blank.html"><img src="./img/icons/icon_user.svg"
                     width="13" height="14" alt="черная иконка пользователя">Войти</a>
+                <p class="login-link navigation-personal-link">
+                  Валентин Петухов
+                </p>
               </li>
               <li class="navigation-personal-compare">
                 <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14"
@@ -85,7 +88,7 @@
   <main>
     <!-- Хлебные крошки -->
     <div class="bread-crumbs">
-      <div class="container-bread-crumbs">
+      <div class="container bread-crumbs">
         <h1 class="header-breadcrumbs-1">Моноподы для селфи</h1>
         <ul class="bread-crumbs-list">
           <li class="br-cr-list">
@@ -104,8 +107,8 @@
     </div>
 
     <!-- Фильтр -->
-    <div class="filters-header">
-      <div class="container-filter-wrap">
+    <div class="conteiner filters-header">
+      <div class="container container-filter-wrap">
         <div class="filter-wrap">
           <h2 class="title"> Фильтр: </h2>
         </div>
@@ -138,7 +141,7 @@
 
     <!-- Секция с карточками товара -->
     <!-- карточка товара телефон с селфи-палкой -->
-    <div class="main-catalog-img">
+    <div class="container main-catalog-img">
       <div class="container main-catalog-img">
 
         <!-- Фильтр слайдер стоимость-->
@@ -150,14 +153,14 @@
               <div class="checkbox-catalog">
                 <form method="get" action="https://echo.htmlacademy.ru">
                   <input type="range" min="0" max="5000" value="50" class="slider" id="myRange">
-                  <fieldset class="checkbox-square">
+                  <fieldset class="container checkbox-square">
                     <legend class="titile-legend">Цвет:</legend>
                     <ul class="checkbox-list">
 
                       <li>
                         <label class="label-input">
                           <input type="checkbox" name="Черный" class="checkbox-input visually-hidden ">
-                          <div class="checkbox-fake"></div>
+                          <span class="checkbox-fake"></span>
                           <span> Черный</span>
                         </label>
                       </li>
@@ -166,7 +169,7 @@
                       <li>
                         <label class="label-input">
                           <input type="checkbox" name="Белый" class="checkbox-input visually-hidden">
-                          <div class="checkbox-fake"></div>
+                          <span class="checkbox-fake"></span>
                           <span> Белый</span>
                         </label>
                       </li>
@@ -174,8 +177,8 @@
                       <li>
                         <label class="label-input">
                           <input type="checkbox" name="Синий" class="checkbox-input visually-hidden">
-                          <div class="checkbox-fake">
-                          </div>
+                          <span class="checkbox-fake">
+                          </span>
                           <span>Синий </span>
                         </label>
                       </li>
@@ -183,8 +186,8 @@
                       <li>
                         <label class="label-input">
                           <input type="checkbox" name="Красный" class="checkbox-input visually-hidden">
-                          <div class="checkbox-fake">
-                          </div>
+                          <span class="checkbox-fake">
+                          </span>
                           <span>Красный </span>
                         </label>
                       </li>
@@ -192,37 +195,46 @@
                       <li>
                         <label class="label-input">
                           <input type="checkbox" name="Розовый" class="checkbox-input visually-hidden">
-                          <div class="checkbox-fake">
-                          </div>
+                          <span class="checkbox-fake">
+                          </span>
                           <span>Розовый </span>
                         </label>
                       </li>
                     </ul>
                   </fieldset>
                   <!-- Чекбокс круглый -->
-                  <fieldset class="checkbox-round">
+                  <fieldset class=" container checkbox-round">
 
                     <legend class="titile-legend">Bluetooth:</legend>
                     <ul class="checkbox-round-item">
-
                       <li>
-                        <input type="radio" checked name="bluetooth" />
-                        <label for="Bluetooth">есть</label>
+                        <label class="label-input">
+                          <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
+                          <span class="radio-fake">
+                          </span>
+                          <span>есть </span>
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" checked name="bluetooth" />
-                        <label for="Bluetooth">нет</label>
+                        <label class="label-input">
+                          <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
+                          <span class="radio-fake">
+                          </span>
+                          <span>нет </span>
+                        </label>
                       </li>
                     </ul>
                   </fieldset>
-                  <button class="button-search button-search-middle" type="submit">Показать</button>
+
+                  <a href="cart.html" class="button-more button-more-small"><span class="button-more-text">показать
+                    </span></a>
                 </form>
               </div>
 
             </div>
           </div>
         </aside>
-        <section class="products">
+        <section class="container products">
           <ul class="product-list">
             <li class="product-item">
               <h3 class="text-inside">Любительская селфи-палка <a href="product.html"></a></h3>
@@ -293,27 +305,26 @@
               </div>
             </li>
           </ul>
-          <div class="pagination">
-            <button type="button" class="button-pagination">Назад</button>
-            <ul class="pagination-item">
-              <li class="pagination-list">
-                <a href="#">1</a>
-              </li>
-              <li class="pagination-list">
-                <a>2</a>
-              </li>
-              <li class="pagination-list">
-                <a href="#">3</a>
-              </li>
-            </ul>
-            <button type="button" class="button-pagination">Вперед</button>
-          </div>
-
         </section>
-        <!-- пагинация -->
+
 
       </div>
+      <div class="pagination">
+        <button type="button" class="button-pagination">Назад</button>
+        <button type="button" class="button-pagination">Вперед</button>
+        <ul class="pagination-item">
+          <li class="pagination-list">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination-list">
+            <a>2</a>
+          </li>
+          <li class="pagination-list">
+            <a href="#">3</a>
+          </li>
+        </ul>
 
+      </div>
     </div>
   </main>
 
@@ -361,17 +372,17 @@
       <div class="footer-row">
         <div class="background-footer" id="rectangle"></div>
         <ul class="footer-socials">
-          <li>
+          <li class="footer-social-item">
             <img class="social-icon" src="./img/footer/sotial/twetter_logo.svg" width="32" height="32"
               alt="twetter icon">
             <a class="social-button" href="#">Твиттер</a>
           </li>
-          <li>
+          <li class="footer-social-item">
             <img class="social-icon" src="./img/footer/sotial/facebook_logo.svg" width="32" height="32"
               alt="facebook icon">
             <a class="social-button" href="#">Фейсбук</a>
           </li>
-          <li>
+          <li class="footer-social-item">
             <img class="social-icon" src="./img/footer/sotial/instagram_logo.svg" width="32" height="32"
               alt="instagram icon">
             <a class="social-button" href="#">Инстаграм</a>
