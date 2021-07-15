@@ -42,12 +42,12 @@
                 <a class="login-link navigation-personal-link" href="blank.html"><img src="./img/icons/icon_user.svg"
                     width="13" height="14" alt="черная иконка пользователя">Войти</a>
               </li>
-              <li class="navigation-personal-link-compare">
+              <li class="navigation-personal-item">
                 <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14"
                     height="14" alt="черная лесница сравнения мини">Сравнить</a>
 
               </li>
-              <li class="navigation-personal-item-cart">
+              <li class="navigation-personal-item">
                 <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_cart.svg" width="14"
                     height="14" alt="черная корзинка мини ">Корзина</a>
               </li>
@@ -60,15 +60,17 @@
             <div class="dropdown-menu">
               <a href="price.html" class="navigation-link">Каталог товаров <img src="./img/icons/Vector.svg" width="16"
                   height="16" alt="+"></a>
-              <ul class="submenu">
-                <!-- Вложенное меню -->
-                <li class="submenu-item"><a href="price.html">Виртуальная реальность</a></li>
-                <li class="submenu-item"><a href="blank.html">Моноподы для селфи</a></li>
-                <li class="submenu-item"><a href="blank.html">Экшн-камеры</a></li>
-                <li class="submenu-item"><a href="price.html">Фитнес-браслеты</a></li>
-                <li class="submenu-item"><a href="blank.html">Умные часы</a></li>
-                <li class="submenu-item"><a href="price.html">Квадрокоптер</a></li>
-              </ul>
+                  <div class="submenu-wrap">
+                    <ul class="submenu">
+                      <!-- Вложенное меню -->
+                      <li class="submenu-item"><a href="price.html">Виртуальная реальность</a></li>
+                      <li class="submenu-item"><a href="blank.html">Моноподы для селфи</a></li>
+                      <li class="submenu-item"><a href="blank.html">Экшн-камеры</a></li>
+                      <li class="submenu-item"><a href="price.html">Фитнес-браслеты</a></li>
+                      <li class="submenu-item"><a href="blank.html">Умные часы</a></li>
+                      <li class="submenu-item"><a href="price.html">Квадрокоптер</a></li>
+                    </ul>
+                  </div>
             </div>
           </div>
           <div class="main-navigation-col">
@@ -101,7 +103,6 @@
               </p>
               <a href="cart.html" class="button-more button-more-small"> <span
                   class="button-more-text">Подробнее</span></a>
-              <section class="details-item">
                 <ul class="details">
                   <li class="mini-text-detalis">
                     800 м
@@ -118,9 +119,6 @@
                     </p>
                   </li>
                 </ul>
-
-              </section>
-
             </div>
           </li>
 
@@ -128,7 +126,7 @@
           <li class="photo-items visually-hidden ">
             <a class="picture-slider"><img src="./img/slider/slider-2_1_fitnes_braclet.png" width="345" height="485"
                 alt="Черный фитнес браслет"></a>
-            <div class="slider-middle">
+            <div class="slider-right">
               <h1 class="title-slider">Худеем правильно!</h1>
               <p class="benefits-list">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы
@@ -158,7 +156,7 @@
           <li class="photo-items visually-hidden">
             <a class="picture-slider"><img src="./img/slider/slider-1_1_selfy_stik.png" width="384" height="486"
                 alt="Штативы, селфи-палки, моноподы черные"></a>
-            <div class="slider-left">
+            <div class="slider-right">
               <h1 class="title-slider">Делай селфи, как Бен Стиллер! </h1>
               <p class="benefits-list">
                 Самая длинная палка для селфи доступна в нашем магазине.
@@ -347,8 +345,8 @@
             Всякое бывает.
           </p>
           <div class="map">
-            <img class="map-picture" src="./img/map/map 1.jpg" width="560" height="222" alt="фото карты">
-            <a href="cart.html" class="button-more button-more-small"> <span class="button-more-text"> напишите
+            <img class="map-picture" id="about-us-map" src="./img/map/map 1.jpg" width="560" height="222" alt="фото карты">
+            <a href="cart.html" class="button-more button-more-small" id="write-to-us"> <span class="button-more-text"> напишите
                 нам</span></a>
           </div>
         </section>
@@ -363,15 +361,15 @@
         <img class="yellow-footer-logo" src="./img/footer/yellow_footer_logo.svg" width="164" height="34"
           alt="logo_yellow">
         <ul class="menu-icon">
-          <li>
+          <li class="menu-icon-item">
             <img src="./img/footer/login_person.svg" width="9" height="10" alt="желтая иконка входа">
             <a class="menu-icon-link" href="blank.html">Войти</a>
           </li>
-          <li>
+          <li class="menu-icon-item">
             <img src="./img/footer/chart.svg" width="14" height="14" alt="желтая иконка сравнить">
             <a class="menu-icon-link" href="blank.html">Сравнить</a>
           </li>
-          <li>
+          <li class="menu-icon-item">
             <img src="./img/footer/cart2.svg" width="10" height="10" alt="желтая иконка корзина">
             <a class="menu-icon-link" href="blank.html">Корзина</a>
           </li>
@@ -383,13 +381,13 @@
           реки Карповки, 5, литера П.
         </p>
         <ul class="footer-contacts-button">
-          <li>
+          <li class="footer-contacts-button-item">
             <a class="navigation-link" href="#">Доставка</a>
           </li>
-          <li>
+          <li class="footer-contacts-button-item">
             <a class="navigation-link" href="#">Гарантия</a>
           </li>
-          <li>
+          <li class="footer-contacts-button-item">
             <a class="navigation-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -399,21 +397,21 @@
       </div>
       <div class="footer-row footer-row-first-line">
         <ul class="footer-socials">
-          <li>
+          <li class="footer-socials-item">
             <a class="social-button" href="#" aria-label="Наш твиттер">
               <img class="social-icon" src="./img/footer/sotial/twetter_logo.svg" width="32" height="32"
               alt="twetter icon">
             </a>
           </li>
 
-          <li>
+          <li class="footer-socials-item">
             <a class="social-button" href="#" aria-label="Наш фейсбук">
               <img class="social-icon" src="./img/footer/sotial/facebook_logo.svg" width="32" height="32"
               alt="facebook icon">
             </a>
           </li>
 
-          <li>
+          <li class="footer-socials-item">
             <a class="social-button" href="#" aria-label="Наш инстаграмм">
               <img class="social-icon" src="./img/footer/sotial/instagram_logo.svg" width="32" height="32"
               alt="instagram icon">
@@ -427,6 +425,39 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal-write-to-us">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label><span class="label">Ваше имя:</span>
+          <input type="text" name="login" placeholder="Имя Фамилия">
+        </label>
+      </p>
+      <p>
+        <label><span  class="label">Ваш e-mail:</span>
+          <input type="text" name="e-mail" placeholder="e-mail@example.com" pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$">
+        </label>
+        <!-- Добавил паттерн для проверки состояния -->
+      </p>
+      <p>
+        <label><span  class="label">Текст письма:</span>
+          <textarea name="letter-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </label>
+      </p>
+      <button class="button-more button-more-small" type="submit"><span class="button-more-text">Отправить</span></button>
+    </form>
+    <button class="modal-form-close" type="button">Закрыть</button>
+  </section>
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488780012!2d37.527429315560504!3d55.68703098053575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sus!4v1545298513705" width="960" height="559" style="border:0" allowfullscreen>
+    </iframe>
+    <p>
+      <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+    </p>
+    <button class="modal-map-close" type="button">Закрыть</button>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
