@@ -39,16 +39,16 @@
           <div class="main-navigation-col">
             <ul class="navigation-personal">
               <li class="navigation-personal-item">
-                <a class="login-link navigation-personal-link" href="blank.html"><img src="./img/icons/icon_user.svg"
+                <a class="login-link navigation-personal-link" href="blank.html"><img class="icon-minilogo" src="./img/icons/icon_user.svg"
                     width="13" height="14" alt="черная иконка пользователя">Войти</a>
               </li>
               <li class="navigation-personal-item">
-                <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14"
+                <a class="navigation-personal-link" href="blank.html"><img class="icon-minilogo" src="./img/icons/icon_chart.svg" width="14"
                     height="14" alt="черная лесница сравнения мини">Сравнить</a>
 
               </li>
               <li class="navigation-personal-item">
-                <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_cart.svg" width="14"
+                <a class="navigation-personal-link" href="blank.html"><img class="icon-minilogo" src="./img/icons/icon_cart.svg" width="14"
                     height="14" alt="черная корзинка мини ">Корзина</a>
               </li>
             </ul>
@@ -58,7 +58,7 @@
         <div class="main-navigation-row">
           <div class="main-navigation-col">
             <div class="dropdown-menu">
-              <a href="price.html" class="navigation-link">Каталог товаров <img src="./img/icons/Vector.svg" width="16"
+              <a href="price.html" class="navigation-link">Каталог товаров <img class="logo-plus" src="./img/icons/Vector.svg" width="16"
                   height="16" alt="+"></a>
               <div class="submenu-wrap">
                 <ul class="submenu">
@@ -121,10 +121,13 @@
               </ul>
               <ul class="slider-dots">
                 <li class="slider-dots-list">
+                  <a href="#" class="slider-dots-link" aria-label="Переход на первый слайд"></a>
                 </li>
                 <li class="slider-dots-list">
+                  <a href="#" class="slider-dots-link" aria-label="Переход на второй слайд"></a>
                 </li>
                 <li class="slider-dots-list">
+                  <a href="#" class="slider-dots-link slider-dots-link-active" aria-label="Переход на третий слайд"></a>
                 </li>
               </ul>
             </div>
@@ -201,47 +204,47 @@
       <section class="catalog-pic">
         <ul class="popular-item">
           <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-img" src="./img/popular/virtual_reality.svg" width="97" height="55"
-                alt="желтая карточка с черными очками виртуальной реальности">
-            </div>
-            <h3 class="title-catalog">Виртульная реальность</h3>
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-virtual">
+              </div>
+              <h3 class="title-catalog">Виртульная реальность</h3>
+            </a>
           </li>
           <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-img" src="./img/popular/selfy_stick.svg" width="86" height="117"
-                alt="желтая карточка с черным моноподом">
-            </div>
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-monopod" >
+              </div>
+              <h3 class="title-catalog">Моноподы для селфи</h3>
+            </a>
+          </li>
+          <li class="pic-card">
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-action" >
+              </div>
+              <h3 class="title-catalog">Экшен-камеры</h3>
+            </a>
+          </li>
+          <li class="pic-card">
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-fitness" >
+              </div>
+              <h3 class="title-catalog">Фитнес-браслеты</h3>
+            </a>
+          </li>
+          <li class="pic-card">
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-smart" >
+              </div>
+              <h3 class="title-catalog">Умные часы</h3>
+            </a>
+          </li>
 
-            <h3 class="title-catalog">Моноподы для селфи</h3>
-          </li>
           <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-img" src="./img/popular/action-camera.svg" width="71" height="87"
-                alt="желтая карточка с чернной экшен камерой ">
-            </div>
-            <h3 class="title-catalog">Экшен-камеры</h3>
-          </li>
-          <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-img" src="./img/popular/fitness_bracelet.svg" width="107" height="65"
-                alt="желтая карточка с черным фитнес-браслетом">
-            </div>
-            <h3 class="title-catalog">Фитнес-браслеты</h3>
-          </li>
-          <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-img" src="./img/popular/smart_watch.svg" width="56" height="98"
-                alt="желтая карточка с черными умными часами">
-            </div>
-            <h3 class="title-catalog">Умные часы</h3>
-          </li>
-
-          <li class="pic-card">
-            <div class="popular-image-wrap">
-              <img class="popular-imge" src="./img/popular/quadrocopter.svg" width="132" height="69" alt="copter_phoy">
-            </div>
-            <h3 class="title-catalog">Квадрокоптеры</h3>
+            <a href="#">
+              <div class="popular-image-wrap popular-image-wrap-kvadro" >
+              </div>
+              <h3 class="title-catalog">Квадрокоптеры</h3>
+            </a>
           </li>
         </ul>
       </section>
@@ -267,11 +270,11 @@
 
 
         <ul class="services-list">
-          <li class="services-item">
+          <li class="services-item services-item-delivery">
             <!-- Доставка -->
             <h3 class="title-second">Доставка</h3>
-            <img class="services-image" src="./img/main/delivery_2.svg" width="136" height="164"
-              alt="Бегущий курьер с посылкой/delivery 2">
+            <!-- <img class="services-image" src="./img/main/delivery_2.svg" width="136" height="164"
+              alt="Бегущий курьер с посылкой/delivery 2"> -->
             <p class="services-text">
               Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо
@@ -279,11 +282,11 @@
             </p>
 
           </li>
-          <li class="services-item hidden">
+          <li class="services-item hidden services-item-warranty">
             <!-- Гарантия -->
             <h3 class="title-second">Гарантия</h3>
-            <img class="services-image" src="./img/main/warranty_1.svg" width="136" height="164"
-              alt="Tools and phone/ warranty 1">
+            <!-- <img class="services-image" src="./img/main/warranty_1.svg" width="136" height="164"
+              alt="Tools and phone/ warranty 1"> -->
             <p class="services-text">
               Если из-за возгорания купленного у нас товара у вас сгорит дом —
               не переживайте, мы выдадим вам новый.
@@ -291,11 +294,11 @@
             </p>
 
           </li>
-          <li class="services-item hidden">
+          <li class="services-item hidden services-item-credit">
             <!-- Кредит -->
             <h3 class="title-second">Кредит</h3>
-            <img class="services-image" src="./img/main/credit_1.svg" width="136" height="164"
-              alt="Человек,тащащий груз/credit 1">
+            <!-- <img class="services-image" src="./img/main/credit_1.svg" width="136" height="164"
+              alt="Человек,тащащий груз/credit 1"> -->
             <p class="services-text">
               Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные
@@ -429,8 +432,8 @@
           </li>
 
         </ul>
-        <a class="footer-copyright">
-          <img src="./img/footer/logo_htmlacademy.png" width="115" height="33" alt="logo_htmlacademy">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright">
+          <img src="./img/footer/htmlacademy_logo.svg" width="115" height="33" alt="logo_htmlacademy">
         </a>
       </div>
     </div>
