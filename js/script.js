@@ -53,7 +53,6 @@ window.addEventListener("keydown", function (evt) {
 	}
 });
 var mapLink = document.querySelector("#about-us-map");
-
 var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-map-close");
 

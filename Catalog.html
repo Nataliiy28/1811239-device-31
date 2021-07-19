@@ -22,7 +22,7 @@
       <nav class="main-navigation">
         <div class="main-navigation-row">
           <div class="main-navigation-col">
-            <a class="header-logo">
+            <a href="./index.html" class="header-logo">
               <img src="./img/icons/main_black_logo.svg" width="163" height="35" alt="DEVICE черная картинка из букв"></a>
             <div class="search">
               <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
@@ -38,7 +38,7 @@
             <ul class="navigation-personal">
               <li class="navigation-personal-item">
                 <a class="login-link navigation-personal-link" href="blank.html">
-                  <img src="./img/icons/icon_user.svg" width="13" height="14" alt="черная иконка пользователя">
+                  <img class="icon-minilogo icon-minilogo-login" src="./img/icons/icon_user.svg" width="13" height="14" alt="черная иконка пользователя">
                   <span class="login-link navigation-personal-link">
                     Валентин Петухов
                   </span>
@@ -47,12 +47,14 @@
 
               </li>
               <li class="navigation-personal-item">
-                <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_chart.svg" width="14" height="14"
+                <a class="navigation-personal-link" href="blank.html">
+                  <img class="icon-minilogo" src="./img/icons/icon_chart.svg" width="14" height="14"
                     alt="черная лесница сравнения мини">Сравнить</a>
 
               </li>
               <li class="navigation-personal-item">
-                <a class="navigation-personal-link" href="blank.html"><img src="./img/icons/icon_cart.svg" width="14" height="14"
+                <a class="navigation-personal-link" href="blank.html">
+                  <img class="icon-minilogo" src="./img/icons/icon_cart.svg" width="14" height="14"
                     alt="черная корзинка мини ">Корзина</a>
               </li>
             </ul>
@@ -62,7 +64,7 @@
         <div class="main-navigation-row">
           <div class="main-navigation-col">
             <div class="dropdown-menu">
-              <a href="price.html" class="navigation-link">Каталог товаров <img src="./img/icons/Vector.svg" width="16" height="16" alt="+"></a>
+              <a href="./catalog.html" class="navigation-link">Каталог товаров<img src="./img/icons/vector.svg" width="16" height="16" alt="+" class="logo-plus"></a>
               <div class="submenu-wrap">
                 <ul class="submenu">
                   <!-- Вложенное меню -->
@@ -133,8 +135,8 @@
             </ul>
 
             <div class="triangel">
-              <button class="next" aria-label="Back to the page" title="next" ></button>
-              <button class="previous triangle-active" aria-label="Back to the page" title="next" ></button>
+              <button class="next" aria-label="Сортировка по возрастанию" title="next"></button>
+              <button class="previous triangle-active" aria-label="Сортировка по убыванию" title="next"></button>
             </div>
           </div>
 
@@ -146,97 +148,97 @@
       <div class="container main-catalog-img">
         <!-- Фильтр слайдер стоимость-->
         <aside class="slidebar">
-            <form method="get" action="https://echo.htmlacademy.ru">
-              <div class="range-filtr">
-								<h4 class="form-header">Стоимость:</h4>
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar">
-										</div>
-										<div class="toggle min-toggle"></div>
-										<div class="toggle max-toggle"></div>
-									</div>
-								</div>
-								<div class="price-controls">
-									<label>от<input class="min-price" type="text" value="0"></label>
-                  <label>до<input class="max-price" type="text" value="5000"></label>
-								</div>
-							</div>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <div class="range-filtr">
+              <h4 class="form-header">Стоимость:</h4>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar">
+                  </div>
+                  <div class="toggle min-toggle"></div>
+                  <div class="toggle max-toggle"></div>
+                </div>
+              </div>
+              <div class="price-controls">
+                <label class="price-controls-label">от<input class="min-price" type="text" value="0"></label>
+                <label class="price-controls-label">до<input class="max-price" type="text" value="5000"></label>
+              </div>
+            </div>
 
-              <fieldset class="fieldset">
-                <legend class="form-header">Цвет:</legend>
-                <ul class="checkbox-list">
-                  <li class="checkbox-item">
-                    <label class="label-input">
-                      <input type="checkbox" name="Черный" class="checkbox-input visually-hidden ">
-                      <span class="checkbox-fake"></span>
-                      <span> Черный</span>
-                    </label>
-                  </li>
+            <fieldset class="fieldset">
+              <legend class="form-header">Цвет:</legend>
+              <ul class="checkbox-list">
+                <li class="checkbox-item">
+                  <label class="label-input">
+                    <input type="checkbox" name="Черный" class="checkbox-input visually-hidden ">
+                    <span class="checkbox-fake"></span>
+                    <span> Черный</span>
+                  </label>
+                </li>
 
 
-                  <li  class="checkbox-item">
-                    <label class="label-input">
-                      <input type="checkbox" name="Белый" class="checkbox-input visually-hidden">
-                      <span class="checkbox-fake"></span>
-                      <span> Белый</span>
-                    </label>
-                  </li>
+                <li class="checkbox-item">
+                  <label class="label-input">
+                    <input type="checkbox" name="Белый" class="checkbox-input visually-hidden">
+                    <span class="checkbox-fake"></span>
+                    <span> Белый</span>
+                  </label>
+                </li>
 
-                  <li  class="checkbox-item">
-                    <label class="label-input">
-                      <input type="checkbox" name="Синий" class="checkbox-input visually-hidden">
-                      <span class="checkbox-fake">
-                      </span>
-                      <span>Синий </span>
-                    </label>
-                  </li>
+                <li class="checkbox-item">
+                  <label class="label-input">
+                    <input type="checkbox" name="Синий" class="checkbox-input visually-hidden">
+                    <span class="checkbox-fake">
+                    </span>
+                    <span>Синий </span>
+                  </label>
+                </li>
 
-                  <li  class="checkbox-item">
-                    <label class="label-input">
-                      <input type="checkbox" name="Красный" class="checkbox-input visually-hidden">
-                      <span class="checkbox-fake">
-                      </span>
-                      <span>Красный </span>
-                    </label>
-                  </li>
+                <li class="checkbox-item">
+                  <label class="label-input">
+                    <input type="checkbox" name="Красный" class="checkbox-input visually-hidden">
+                    <span class="checkbox-fake">
+                    </span>
+                    <span>Красный </span>
+                  </label>
+                </li>
 
-                  <li  class="checkbox-item">
-                    <label class="label-input">
-                      <input type="checkbox" name="Розовый" class="checkbox-input visually-hidden">
-                      <span class="checkbox-fake">
-                      </span>
-                      <span>Розовый </span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <!-- Чекбокс круглый -->
-              <fieldset class="fieldset">
-                <legend class="form-header">Bluetooth:</legend>
-                <ul class="radio-list">
-                  <li class="radio-item">
-                    <label class="label-input">
-                      <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
-                      <span class="radio-fake">
-                      </span>
-                      <span>есть </span>
-                    </label>
-                  </li>
-                  <li class="radio-item">
-                    <label class="label-input">
-                      <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
-                      <span class="radio-fake">
-                      </span>
-                      <span>нет </span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+                <li class="checkbox-item">
+                  <label class="label-input">
+                    <input type="checkbox" name="Розовый" class="checkbox-input visually-hidden">
+                    <span class="checkbox-fake">
+                    </span>
+                    <span>Розовый </span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <!-- Чекбокс круглый -->
+            <fieldset class="fieldset">
+              <legend class="form-header">Bluetooth:</legend>
+              <ul class="radio-list">
+                <li class="radio-item">
+                  <label class="label-input">
+                    <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
+                    <span class="radio-fake">
+                    </span>
+                    <span>Есть</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="label-input">
+                    <input type="radio" name="Bluetooth" class="radio-input visually-hidden">
+                    <span class="radio-fake">
+                    </span>
+                    <span>Нет</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
 
-              <a href="cart.html" class="button-more button-more-small"><span class="button-more-text">показать
-                </span></a>
-            </form>
+            <a href="cart.html" class="button-more button-more-middle"><span class="button-more-text">показать
+              </span></a>
+          </form>
         </aside>
         <section class="container products">
           <ul class="product-list">
@@ -247,7 +249,7 @@
                 <span class="price">1 100 руб</span>
               </div>
               <div class="product-button">
-                <a href="cart.html" class="button-more button-more-small">
+                <a href="cart.html" class="button-more button-more-middle">
                   <span class="button-more-text"> В корзину</span>
                 </a>
                 <a href="cart.html" class="price-add"> Добавить к сравнению</a>
@@ -260,10 +262,10 @@
               <img class="product-img" src="./img/catalog/selfy_black_stick.jpg" width="360" height="381" alt="Черная селфи-палка маленькая толстая">
               <div class="product-desc">
                 <h3 class="text-inside"><a href="product.html">Профессиональная<br /> селфи-палка </a></h3>
-                <span class="price">1 100 руб</span>
+                <span class="price">1 500 руб</span>
               </div>
               <div class="product-button">
-                <a href="cart.html" class="button-more button-more-small">
+                <a href="cart.html" class="button-more button-more-middle">
                   <span class="button-more-text"> В корзину</span>
                 </a>
                 <a href="cart.html" class="price-add"> Добавить к сравнению</a>
@@ -279,7 +281,7 @@
                 <span class="price">1 500 руб</span>
               </div>
               <div class="product-button">
-                <a href="cart.html" class="button-more button-more-small">
+                <a href="cart.html" class="button-more button-more-middle">
                   <span class="button-more-text"> В корзину</span>
                 </a>
                 <a href="cart.html" class="price-add"> Добавить к сравнению</a>
@@ -288,13 +290,14 @@
 
             <!--  карточка товара селфи-палка «Следуй за мной» -->
             <li class="product-item">
+              <div class="stiker stiker-new">new</div>
               <img class="product-img" src="./img/catalog/hand_stick.jpg" width="360" height="381" alt="селфи-палка  с искусственной рукой">
               <div class="product-desc">
                 <h3 class="text-inside"><a href="product.html">Селфи-палка «Следуй за мной» </a></h3>
                 <span class="price">1 900 руб</span>
               </div>
               <div class="product-button">
-                <a href="cart.html" class="button-more button-more-small">
+                <a href="cart.html" class="button-more button-more-middle">
                   <span class="button-more-text"> В корзину</span>
                 </a>
                 <a href="cart.html" class="price-add"> Добавить к сравнению</a>
@@ -329,10 +332,14 @@
   <footer class="main-footer">
     <div class="container">
       <div class="footer-row">
-        <img class="yellow-footer-logo" src="./img/footer/yellow_footer_logo.svg" width="164" height="34" alt="logo_yellow">
+        <a href="./index.html">
+          <img class="yellow-footer-logo" src="./img/footer/yellow_footer_logo.svg" width="164" height="34" alt="logo_yellow">
+        </a>
         <ul class="menu-icon">
           <li class="menu-icon-item">
-            <img src="./img/footer/login_person.svg" width="9" height="10" alt="желтая иконка входа">
+            <a href="./index.html">
+              <img src="./img/footer/login_person.svg" width="9" height="10" alt="желтая иконка входа">
+            </a>
             <span class="menu-icon-link">
               Валентин Петухов
             </span>
@@ -350,7 +357,7 @@
       </div>
       <div class="footer-row">
         <p class="footer-adress">
-          Адрес: Санкт-Петербург, набережная
+          Санкт-Петербург, набережная
           реки Карповки, 5, литера П.
         </p>
         <ul class="footer-contacts-button">
@@ -365,29 +372,26 @@
           </li>
         </ul>
         <p class="contacts-phone-wrap">
-          <span>Тел.: </span><a class="contacts-phone" href="tel:+78005558628">+7 (812) 666-02-66</a>
+          <span>Тел.: </span><a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </p>
       </div>
       <div class="footer-row footer-row-first-line">
         <ul class="footer-socials">
           <li class="footer-socials-item">
-            <a class="social-button" href="#" aria-label="Наш твиттер">
-              <img class="social-icon" src="./img/footer/sotial/twetter_logo.svg" width="32" height="32" alt="twetter icon">
-            </a>
-          </li>
-
-          <li class="footer-socials-item">
             <a class="social-button" href="#" aria-label="Наш фейсбук">
               <img class="social-icon" src="./img/footer/sotial/facebook_logo.svg" width="32" height="32" alt="facebook icon">
             </a>
           </li>
-
           <li class="footer-socials-item">
             <a class="social-button" href="#" aria-label="Наш инстаграмм">
               <img class="social-icon" src="./img/footer/sotial/instagram_logo.svg" width="32" height="32" alt="instagram icon">
             </a>
           </li>
-
+          <li class="footer-socials-item">
+            <a class="social-button" href="#" aria-label="Наш твиттер">
+              <img class="social-icon" src="./img/footer/sotial/twetter_logo.svg" width="32" height="32" alt="twetter icon">
+            </a>
+          </li>
         </ul>
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright">
           <img src="./img/footer/htmlacademy_logo.svg" width="115" height="33" alt="logo_htmlacademy">
